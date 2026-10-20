@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --font-heading:'Sora',Sans-serif;
+    --font-body:'DM Sans',Sans-serif;
+    --morado-900:#271D5E;
+    --morado-800:#382B87;
+    --morado-700:#4A38B0;
+    --morado-600:#5F4BD6;
+    --morado-500:#7B68EE;
+    --morado-400:#9686F2;
+    --morado-300:#B3A7F7;
+    --morado-200:#CEC6FA;
+    --morado-100:#E6E2FD;
+    --morado-50:#F3F1FE;
+    
+}
+
+.badge-morado{
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.25vw, 16px);
+    color: var(--morado-800)!important;
+    
+}

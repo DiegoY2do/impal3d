@@ -58,7 +58,7 @@ h1,h2 {
     font-size: clamp(28px, 3.5vw, 44px);
     font-weight: 700;
 }
-.contanier-max{
+.container-max{
     width: 90%;
     max-width: 1800px;
 }

@@ -1,0 +1,25 @@
+/* Todos los estilos de about van aqui */
+
+.hero-about{
+width: 100%;
+padding: 50px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.about-text{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+gap: 25px;
+}
+
+.about-img{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}

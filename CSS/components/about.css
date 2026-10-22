@@ -142,6 +142,7 @@ text-align: left;
     border-radius: 10px;
     gap: 10px;
   }
+
   .newsletter-form input{
     align-items: left;
     background: var(--neutro-50);
@@ -151,44 +152,48 @@ text-align: left;
     font-family: var(--font-body);
     font-weight:600;
     font-size: clamp(0.8rem, 1vw, 0.8rem);
-    
 }
+
 .newsletter-form button{
     padding: 0 20px;
     border-radius: 10px;
 }
 
-.diseño{
-  background-color:var(--morado-800);
-    font-family: var(--font-heading);
-    font-weight: 1200;
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    padding: 30px 40px;
+.information{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 30px;
+    text-align: start;
 }
 
-
-.information .ayuda .us{
+.information h4 h5 {
   font-family: var(--font-heading);
-  font-size: clamp(0.8rem, 1vw, 0.8rem);
   font-weight: 1000;
+  font-size: clamp(2rem, 1vw, 2rem);
   color: var(--neutro-0);
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
+  text-align: start;
 }
 
-.us h5 {
+.information p {
   font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 1200;
+  font-weight: 400;
+  font-size: clamp(1.5rem);
   color: var(--neutro-0);
-
+  text-align: start;
 }
-.is p{
+
+.newsletter-form {
+    background: var(--neutro-0);
+    flex-direcrion: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.us p{
   font-family: var(--font-heading);
   font-weight: 1200;
   font-size: clamp(1.5rem, 2vw, 2rem);

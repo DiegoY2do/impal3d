@@ -2,7 +2,7 @@ export function renderFooter(){
     return ` 
     <footer class="footer-custom text-white">
 
-    <div class="container">
+    <div class="col-12 col-md-12 col-lg-12">
 
       <!-- Suscripción -->
       <div class="newsletter p-4 rounded-4 mb-5">
@@ -13,7 +13,7 @@ export function renderFooter(){
             </div>
 
            <div class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico">
+                <input class="correo" type="email" placeholder="Tu correo electrónico">
 
               <button class="btn btn-light">
                Suscribirme
@@ -22,17 +22,18 @@ export function renderFooter(){
      </div>
 
       <!-- Información -->
-      <div class="information row">
+      <div class="information row col-md-3">
 
-        <div class="col-md-3 diseño">
-             <h4>IMP AI3D</h4>
+        <div>
+             <h4>imp_al3d</h4>
+             <br>
               <p>
                 Impresión 3D de diseño y precisión.
                 Piezas para tu casa, escritorio y tus ideas.
               </p>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-lg-3 tienda">
           <h5>Tienda</h5>
 
           <ul class="list-unstyled">
@@ -44,7 +45,7 @@ export function renderFooter(){
           </ul>
         </div>
 
-        <div class="col-md-3 ayuda">
+        <div class="col-md-3 col-lg-3 ayuda">
           <h5>Ayuda</h5>
           <ul class="list-unstyled">
             <li>Preguntas frecuentes</li>
@@ -54,9 +55,10 @@ export function renderFooter(){
           </ul>
         </div>
 
-        <div class="col-md-3 us" >
+        <div class="col-md-3 col-lg-3 us" >
           <h5>Contacto</h5>
-          <p>WhatsApp: +52 000 000 0000</p>
+          <br>
+          <p>WhatsApp: +52 55 56 4196 4434</p>
           <p>hola@impai3d.com</p>
           <p>Lun a sáb: 10:00 a 19:00</p>
         </div>

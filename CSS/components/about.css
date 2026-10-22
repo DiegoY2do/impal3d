@@ -108,6 +108,7 @@ text-align: left;
 .value-card h3{
     font-family: var(--font-heading);
     font-size: 20px;
+    margin-bottom: 12px;
 }
 
 /* Una columna en celular */
@@ -115,4 +116,38 @@ text-align: left;
     .values-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.value-card { 
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.about-values h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.value-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: var(--morado-50);
+    color: var(--morado-600);
+}
+
+.value-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }

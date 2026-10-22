@@ -50,6 +50,10 @@
     --info:   #4C9BF0;
 }
 
+body{
+    background: var(--neutro-50);
+}
+
 a{
     text-decoration: none;
 }
@@ -57,7 +61,14 @@ h1,h2 {
     font-family: var(--font-heading);
     font-size: clamp(28px, 3.5vw, 44px);
     font-weight: 700;
+    color: var(--neutro-950);
 }
+
+p{
+    color: var(--neutro-900);
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
 .container-max{
     width: 90%;
     max-width: 1800px;

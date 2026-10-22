@@ -1,25 +1,79 @@
 /* Todos los estilos de about van aqui */
 
-.hero-about{
-width: 100%;
-padding: 50px 0;
-display: flex;
-justify-content: center;
-align-items: center;
+.hero-about {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-text{
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-direction: column;
-gap: 25px;
+.about-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+}   
+
+.about-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-img{
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+.statics-container{
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.statistics-card {
+  padding: 40px 30px;
+  background: var(--neutro-0);
+  border: 1px solid var(--neutro-200);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.statistics-card .number-statistics {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--morado-600);
+  font-size: clamp(30px, 2.7vw, 30px);
+}
+
+.statistics-card .number-statistics {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1024px) {
+  .statistics-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .statistics-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .statistics-card{
+    align-items: center;
+  }
 }

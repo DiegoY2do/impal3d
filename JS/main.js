@@ -3,6 +3,7 @@ import { renderAboutValues } from './components/aboutvalues.js';
 import { renderNavbar } from './components/header.js';
 import { renderAboutHero } from './components/abouthero.js';
 import { renderStatics, initStatics } from './components/statistics.js';
+import { renderTimeline } from './components/timeline.js';
 import { renderTeam } from './components/team.js';
 
 const header = document.querySelector('#header');
@@ -19,6 +20,9 @@ const team = document.querySelector('#team');
 team.innerHTML = renderTeam();
 const aboutvalues = document.querySelector('#aboutvalues');
 aboutvalues.innerHTML = renderAboutValues();
+
+const timeline = document.querySelector('#timeline');
+timeline.innerHTML = renderTimeline();
 
 const footer = document.querySelector('#footer');
 footer.innerHTML = renderFooter();

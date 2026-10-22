@@ -23,3 +23,41 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+/* Lo que nos mueve */
+.about-values {
+    padding: 50px 0;
+    background: var(--neutro-50);
+    color: var(-neutro-900);
+    font-family: var(--font-body);
+}
+
+.about-values .container-max {
+    margin: 0 auto;
+}
+
+.about-values p {
+    color: var(--neutro-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Las tres columnas */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.value-card h3{
+    font-family: var(--font-heading);
+    font-size: 20px;
+}
+
+/* Una columna en celular */
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

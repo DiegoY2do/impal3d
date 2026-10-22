@@ -2,8 +2,8 @@ export function renderAboutHero (){
     return `
     <section class="hero-about">
             <div class="container-max">
-                <div class="grid text-center">
-                    <div class="g-col-6 about-text">
+                <div class="about-text container-about">
+                    <div class="about-text container-about" >
                         <div class="badge-morado">Sobre nosotros</div>
 
                         <h2>Hacemos tangible lo que imaginas.</h2>

@@ -7,6 +7,13 @@
   justify-content: center;
   align-items: center;
 }
+.container-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
 
 .about-text{
 width: 100%;
@@ -23,6 +30,8 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--neutro-900);
+  border-radius: 28px;
 }
 
 .statics-container{
@@ -219,7 +228,7 @@ text-align: left;
     background: var(--neutro-50);
     border: none;
     border-radius: 10px;
-    padding: 0 10px
+    padding: 0 10px;
     font-family: var(--font-body);
     font-weight:600;
     font-size: clamp(0.8rem, 1vw, 0.8rem);

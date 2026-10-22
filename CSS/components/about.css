@@ -260,10 +260,6 @@ text-align: left;
     font-family: var(--font-body);
     font-weight:600;
     font-size: clamp(0.8rem, 1vw, 0.8rem);
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ba2c68dbfc2ca5d31360303780f992d6f3b451b
 }
 
 .newsletter-form button{
@@ -313,4 +309,146 @@ text-align: left;
 }
 .information > div{
     flex: 1;
+}
+  
+
+
+/* Linea del timepo (Nuestra Historia) */
+.historia {
+    width: 100%;
+    background-color: var(--neutro-50);
+    color: var(--neutro-950);
+}
+
+.historia .container-max {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.historia h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 700;
+    color: var(--neutro-950);
+}
+
+.historia-subtitulo {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--neutro-500);
+    margin-bottom: 0;
+}
+
+.historia .timeline {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    margin: 35px 0 0;
+}
+
+.historia .timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: var(--neutro-300);
+    z-index: 0;
+}
+
+.historia .timeline-item {
+    position: relative;
+    min-width: 0;
+    padding: 38px 12px 0 0;
+    z-index: 1;
+}
+
+.historia .timeline-dot {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--morado-600);
+    border: 4px solid var(--neutro-50);
+    outline: 2px solid var(--morado-600);
+    z-index: 2;
+}
+
+.historia .timeline-year {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--morado-600);
+    margin-bottom: 5px;
+}
+
+.historia .timeline-item h5 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neutro-950);
+    margin-bottom: 8px;
+}
+
+.historia .timeline-item p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--neutro-500);
+    margin-bottom: 0;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .historia .timeline {
+        gap: 12px;
+    }
+
+    .historia .timeline-item h5 {
+        font-size: 0.9rem;
+    }
+
+    .historia .timeline-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 767.98px) {
+
+    .historia .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .historia .timeline::before {
+        top: 10px;
+        bottom: 20px;
+        left: 10px;
+        right: auto;
+        width: 2px;
+        height: auto;
+    }
+
+    .historia .timeline-item {
+        width: 100%;
+        padding: 0 0 0 45px;
+    }
+
+    .historia .timeline-dot {
+        top: 1px;
+        left: 1px;
+    }
 }

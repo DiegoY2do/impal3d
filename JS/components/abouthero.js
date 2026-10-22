@@ -2,8 +2,8 @@ export function renderAboutHero (){
     return `
     <section class="hero-about">
             <div class="container-max">
-                <div class="grid text-center">
-                    <div class="g-col-6 about-text">
+                <div class="container-about">
+                    <div class="about-text" >
                         <div class="badge-morado">Sobre nosotros</div>
 
                         <h2>Hacemos tangible lo que imaginas.</h2>
@@ -20,7 +20,7 @@ export function renderAboutHero (){
                     </div>
                     <div class="g-col-6 about-img">
                         <div class="hero-img">
-                            <img src="" alt="">
+                            <img src="https://images.unsplash.com/photo-1624455806586-037944b1fa1a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="">
                         </div>
                     </div>
                 </div>

@@ -67,14 +67,20 @@ h1,h2 {
     font-family: var(--font-body);
     font-size: clamp(14px, 1.25vw, 16px);
     color: var(--morado-800);
+    font-weight: 700;
 }
-
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
 .btn-primary, .btn-secundary{
     display: inline-block;
     padding: 10px 20px ;
     font-family: var(--font-heading);
     font-size: clamp(15px, 1.25vw, 16px);
-    border-radius: 8px;
+    border-radius: 14px;
     font-weight: 600;
     transition: transform 0.3s ease, background 0.3s ease;
 }

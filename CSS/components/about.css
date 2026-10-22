@@ -8,14 +8,15 @@
   align-items: center;
 }
 
-.about-text {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 25px;
-}   
+.about-text{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+gap: 25px;
+text-align: left;
+}
 
 .about-img {
   width: 100%;

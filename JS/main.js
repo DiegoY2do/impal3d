@@ -4,7 +4,6 @@ import { renderNavbar } from './components/header.js';
 import { renderAboutHero } from './components/abouthero.js';
 import { renderStatics, initStatics } from './components/statistics.js';
 import { renderTimeline } from './components/timeline.js';
-import {renderFooter } from './components/footer.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();

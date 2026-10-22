@@ -39,12 +39,22 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.hero-img spam{
+  position: absolute;
+  padding: 5px 10px;
+  top : 25px;
+  left: 20px;
+  color: var(--neutro-50);
+  font-weight: 500;
 }
 
 .hero-img img{
-  width: 70%;
+  width: 85%;
   height: auto;
   aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
 .statics-container{

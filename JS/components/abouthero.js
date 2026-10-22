@@ -20,7 +20,9 @@ export function renderAboutHero (){
                     </div>
                     <div class="g-col-6 about-img">
                         <div class="hero-img">
-                            <img src="https://images.unsplash.com/photo-1624455806586-037944b1fa1a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="">
+                            <spam class="etiqueta">Hecho en México
+                            </spam>
+                            <img src="assets/img/banners/hero-about.webp" alt="">
                         </div>
                     </div>
                 </div>

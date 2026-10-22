@@ -8,11 +8,11 @@
   align-items: center;
 }
 .container-about {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  width: 100%;
+  gap: 50px;
 }
 
 .about-text{
@@ -32,6 +32,19 @@ text-align: left;
   align-items: center;
   background: var(--neutro-900);
   border-radius: 28px;
+}
+
+.hero-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img{
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .statics-container{
@@ -72,6 +85,10 @@ text-align: left;
 }
 
 @media (max-width: 1024px) {
+  .container-about {
+    flex-direction: column;
+  }
+
   .statistics-cards {
     grid-template-columns: repeat(2, 1fr);
   }

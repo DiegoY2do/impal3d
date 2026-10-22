@@ -1,3 +1,5 @@
+import { renderFooter } from './components/footer.js';
+import { renderAboutValues } from './components/aboutvalues.js';
 import { renderNavbar } from './components/header.js';
 import { renderAboutHero } from './components/abouthero.js';
 import { renderStatics, initStatics } from './components/statistics.js';
@@ -15,3 +17,8 @@ initStatics();
 
 const team = document.querySelector('#team');
 team.innerHTML = renderTeam();
+const aboutvalues = document.querySelector('#aboutvalues');
+aboutvalues.innerHTML = renderAboutValues();
+
+const footer = document.querySelector('#footer');
+footer.innerHTML = renderFooter();

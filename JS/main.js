@@ -5,6 +5,7 @@ import { renderAboutHero } from './components/abouthero.js';
 import { renderStatics, initStatics } from './components/statistics.js';
 import { renderTimeline } from './components/timeline.js';
 import { renderTeam } from './components/team.js';
+import { renderBrands } from './components/brands.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -26,3 +27,6 @@ timeline.innerHTML = renderTimeline();
 
 const footer = document.querySelector('#footer');
 footer.innerHTML = renderFooter();
+
+const brands = document.querySelector("#brands");
+brands.innerHTML = renderBrands();

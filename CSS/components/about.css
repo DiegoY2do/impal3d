@@ -431,6 +431,7 @@ text-align: left;
 }
 
 .historia .container-max {
+    padding: 50px 0;
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
@@ -656,12 +657,19 @@ text-align: left;
   align-items: center;
   gap: 30px;
   background: var(--neutro-0);
+  border: 2px solid var(--neutro-200);
+  padding: 50px 30px;
+  border-radius: 20px;
 }
 
 .brand-text{
   flex-shrink: 0;       
   display: flex;
   align-items: center;
+}
+
+.brand-text p{
+  font-weight: 700;
 }
 
 .brand-logos{
@@ -689,7 +697,6 @@ text-align: left;
 @media (max-width: 1024px){
   .brands{
     flex-direction: column;
-    gap: 50px;
   }
 
   .brand-text{
@@ -700,6 +707,7 @@ text-align: left;
   .brand-logos{
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
 }
 

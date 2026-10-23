@@ -80,20 +80,19 @@ export function renderFooter(){
 
                 </div>
 
-          <br>
+          <hr>
 
                <!-- Pie inferior -->
-               <div class="footer-botton">   
-                  <p>
-                   © 2026 imp_al3d. Todos los derechos reservados.
-                   </p>
+               <div class= "container foot"
+               <div class="footer-botton ">   
+                  <p class="derechos" > © 2026 imp_al3d. Todos los derechos reservados.</p>
               
-
                   <div class="payments">
                   <span class="badge text-bg-secondary">Visa</span>
                   <span class="badge text-bg-secondary">Mastercard</span>
                   <span class="badge text-bg-secondary">OXXO</span>
                   <span class="badge text-bg-secondary">PayPal</span>
+               </div>
                </div>
               
 

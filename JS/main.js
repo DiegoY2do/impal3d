@@ -1,4 +1,12 @@
-import {renderCompromiso } from './components/compromiso.js';
+import { renderFooter } from './components/footer.js';
+import { renderAboutValues } from './components/aboutvalues.js';
+import { renderNavbar } from './components/header.js';
+import { renderAboutHero } from './components/abouthero.js';
+import { renderStatics, initStatics } from './components/statistics.js';
+import { renderTimeline } from './components/timeline.js';
+import { renderTeam } from './components/team.js';
+import { renderCompromiso } from './components/compromiso.js';
+import { renderBrands } from './components/brands.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -19,7 +27,7 @@ aboutvalues.innerHTML = renderAboutValues();
 const timeline = document.querySelector('#timeline');
 timeline.innerHTML = renderTimeline();
 
-const brands = document.querySelector("#brands");
+const brands = document.querySelector('#brands');
 brands.innerHTML = renderBrands();
 
 const compromiso = document.querySelector('#compromiso');

@@ -283,7 +283,7 @@ text-align: left;
 
 .newsletter-form {
     background: var(--neutro-0);
-    flex-direcrion: row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;

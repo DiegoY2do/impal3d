@@ -11,8 +11,12 @@ export function renderNavbar() {
 
       <nav class="store-navbar" aria-label="Navegación principal">
         <a class="store-logo" href="index.html" aria-label="Inicio">
-          <img src="./assets/img/brand/logo-imp-al3d-negro.svg"" alt="Logo de Impal3D" width="60" height="40">
+         <img src="./assets/img/brand/logo-imp-al3d-negro.svg" alt="Logo de Impal3D" width="60" height="40">
         </a>
+
+        <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+        </button>
 
         <div class="store-links">
           <a class="store-link active" href="index.html">Inicio</a>

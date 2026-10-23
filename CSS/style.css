@@ -263,8 +263,16 @@ p{
   }
 
   .store-links {
+    display: none;
     justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     gap: 12px;
+  }
+
+  .store-links.is-open {
+    display: flex;
   }
 
   .store-link {
@@ -277,6 +285,10 @@ p{
 
   .store-actions {
     gap: 10px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
   }
 }
 
@@ -318,4 +330,54 @@ p{
   width: 22px;
   height: 22px;
   display: block;
+}
+/* Botón hamburguesa */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: var(--neutro-800);
+    cursor: pointer;
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+    .store-navbar {
+        padding: 12px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .store-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        order: 5;
+        gap: 8px;
+    }
+
+    .store-links.active {
+        display: flex;
+    }
+
+    .store-link {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .store-search {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .store-actions {
+        gap: 12px;
+    }
 }

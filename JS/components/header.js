@@ -12,16 +12,12 @@ export function renderNavbar() {
       <nav class="store-navbar" aria-label="Navegación principal">
         <a class="store-logo" href="index.html" aria-label="Inicio">
           <img
-        src="./assets/img/brand/logo-imp-al3d-negro.svg"
+        src="./img/logo.png"
         alt="Logo de Impal3D"
-        style="width: 180px; height: auto;"
+        width="60"
+        height="40"
         >
         </a>
-        <button class="mobile-menu-toggle" type="button"
-        aria-label="Abrir menú"
-        aria-expanded="false">
-        ☰
-        </button>
 
         <div class="store-links">
           <a class="store-link active" href="index.html">Inicio</a>
@@ -32,7 +28,7 @@ export function renderNavbar() {
 
           <a class="store-link" href="#colecciones">Colecciones</a>
           <a class="store-link" href="#personalizados">Personalizados</a>
-          <a class="store-link" href="about.html">Nosotros</a>
+          <a class="store-link" href="#about">Nosotros</a>
           <a class="store-link" href="#contacto">Contacto</a>
         </div>
 
@@ -85,4 +81,3 @@ export function renderNavbar() {
     </header>
   `;
 }
-

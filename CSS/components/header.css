@@ -27,6 +27,7 @@
 .announcement-bar p {
   margin: 0;
   color: var(--neutro-0);
+  font-size: 12px;
 }
 
 .announcement-bar strong {

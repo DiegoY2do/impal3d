@@ -35,3 +35,4 @@ compromiso.innerHTML = renderCompromiso();
 
 const footer = document.querySelector('#footer');
 footer.innerHTML = renderFooter();
+

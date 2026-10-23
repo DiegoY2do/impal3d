@@ -300,18 +300,20 @@ text-align: left;
 
 .footer-custom{
     background-color: var(--neutro-950);
-    padding: 60px 0 20px;
+    padding: 60px 20px;
     color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.footer-custom .container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
+
 .newsletter{
     background-color:var(--morado-800);
     font-family: var(--font-heading);
-    font-weight: 1200;
+    font-weight: 900;
     font-size: clamp(1.5rem, 2vw, 2rem);
     border-radius: 20px;
     padding: 30px 40px;
@@ -319,22 +321,28 @@ text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .newsletter h3{
    font-family: var(--font-heading);
    color: var(--neutro-0);
-   font-weight: 600;
+   font-weight: 900;
    font-size: clamp(20px, 1vw, 20px);
 
 }
-.newsletter p{
+
+.newsletter p {
    font-family: var(--font-body);
    color: var(--neutro-0);
    font-weight: 300;
    font-size: clamp(0.8rem, 1vw, 0.8rem);
-
+}
+.newsletter li {
+   font-family: var(--font-body);
+   color: var(--neutro-0);
+   font-weight: 300;
+   font-size: clamp(0.8rem, 1vw, 0.8rem);
 }
 
 .btn-light{
@@ -346,36 +354,51 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 10px 20px;
   border-radius: 10px;
 }
 
 .newsletter-form{
-    background: var(--neutro-0);
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items:center;
     flex-wrap:wrap;
-    border-radius: 10px;
     gap: 10px;
   }
 
-  .newsletter-form input{
-    align-items: left;
-    background: var(--neutro-50);
+  .newsletter-form input[type="email"]{
+    background: var(--neutro-0);
     border: none;
     border-radius: 10px;
     padding: 0 10px;
     font-family: var(--font-body);
     font-weight:600;
     font-size: clamp(0.8rem, 1vw, 0.8rem);
+    width: 350px;
+    padding: 10px 20px;
+    text-indent: 10px;
+  }
+    .newsletter-form input[type="submit"]{
+    background: var(--morado-300);
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-family: var(--font-body);
+    font-weight:600;
+    font-size: clamp(0.8rem, 1vw, 0.8rem);
+    width: 200px;
+    padding: 10px 20px;
+    text-indent: 10px;
   }
 
-.newsletter-form button{
-    padding: 0 20px;
+  .news-form{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    flex-wrap:wrap;
     border-radius: 10px;
-}
+    gap: 10px;
+  }
 
 .information{
     display: flex;
@@ -384,43 +407,38 @@ text-align: left;
     text-align: start;
 }
 
-.information h4 h5 {
+.information h4 {
   font-family: var(--font-heading);
-  font-weight: 1000;
+  font-weight: 900;
   font-size: clamp(2rem, 1vw, 2rem);
   color: var(--neutro-0);
   text-align: start;
 }
 
 .information p {
-  font-family: var(--font-body);
   font-weight: 400;
-  font-size: clamp(1.5rem);
-  color: var(--neutro-0);
-  text-align: start;
+  font-size: 1.5rem;
+  color:var(--neutro-50);
+  text-align: left;
+
 }
 
-.newsletter-form {
-    background: var(--neutro-0);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    border-radius: 10px;
-    gap: 20px;
-    flex-direction: row;
-}
 
-.us p{
-  font-family: var(--font-heading);
-  font-weight: 1200;
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  color: var(--neutro-0);
-}
+
 .information > div{
     flex: 1;
 }
 
+.footer-botton p{
+  color:var(--neutro-0);
+  font-size: clamp(0.8rem, 1vw, 0.8rem);
+}
+
+.payments{
+  text-align: right;
+
+
+}
 
 
 /* Linea del timepo (Nuestra Historia) */
@@ -431,6 +449,7 @@ text-align: left;
 }
 
 .historia .container-max {
+    padding: 50px 0;
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
@@ -561,4 +580,155 @@ text-align: left;
         top: 1px;
         left: 1px;
     }
+}
+
+.compromiso-container{
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compromiso-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.compromiso-card {
+  padding: 40px 30px;
+  background: var(--neutro-900);
+  border: 1px solid var(--neutro-200);
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.compromiso-card .number-statistics {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #fff;
+  font-size: clamp(30px, 2.7vw, 30px);
+}
+
+.compromiso-card .number-statistics {
+  font-variant-numeric: tabular-nums;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--morado-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.compromiso-card p {
+  color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+  .compromiso-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .compromiso-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .compromiso-card{
+    align-items: center;
+  }
+}
+
+.brands-container{
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.brands{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: var(--neutro-0);
+  border: 2px solid var(--neutro-200);
+  padding: 50px 30px;
+  border-radius: 20px;
+}
+
+.brand-text{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.brand-text p{
+  font-weight: 700;
+}
+
+.brand-logos{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.brand-item{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-item img{
+  max-width: 100%;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px){
+  .brands{
+    flex-direction: column;
+  }
+
+  .brand-text{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand-logos{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px){
+  .brand-logos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-item:last-child:nth-child(odd){
+    grid-column: 1 / -1;
+  }
 }

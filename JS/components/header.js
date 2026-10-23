@@ -11,12 +11,7 @@ export function renderNavbar() {
 
       <nav class="store-navbar" aria-label="Navegación principal">
         <a class="store-logo" href="index.html" aria-label="Inicio">
-          <img
-        src="./img/logo.png"
-        alt="Logo de Impal3D"
-        width="60"
-        height="40"
-        >
+          <img src="./assets/img/brand/logo-imp-al3d-negro.svg"" alt="Logo de Impal3D" width="60" height="40">
         </a>
 
         <div class="store-links">

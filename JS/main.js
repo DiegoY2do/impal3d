@@ -11,19 +11,6 @@ import { renderBrands } from './components/brands.js';
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
 
-const menuToggle = header.querySelector('.mobile-menu-toggle');
-const storeLinks = header.querySelector('.store-links');
-
-menuToggle.addEventListener('click', () => {
-  const isOpen = storeLinks.classList.toggle('is-open');
-
-  menuToggle.setAttribute('aria-expanded', isOpen);
-  menuToggle.setAttribute(
-    'aria-label',
-    isOpen ? 'Cerrar menú' : 'Abrir menú'
-  );
-});
-
 const abouthero = document.querySelector('#abouthero');
 abouthero.innerHTML = renderAboutHero();
 

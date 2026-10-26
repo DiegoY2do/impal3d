@@ -8,6 +8,7 @@ import { renderTeam } from './components/team.js';
 import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderContactForm } from './components/contactform.js';
+import { renderAboutBanner } from './components/aboutbanner.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -39,6 +40,9 @@ brands.innerHTML = renderBrands();
 
 const compromiso = document.querySelector('#compromiso');
 compromiso.innerHTML = renderCompromiso();
+
+const aboutbanner = document.querySelector('#aboutbanner');
+aboutbanner.innerHTML = renderAboutBanner();
 
 const footer = document.querySelector('#footer');
 footer.innerHTML = renderFooter();

@@ -541,7 +541,7 @@
     font-family: var(--font-body);
 }
 
-.preguntas-rapidas .container-max {
+.preguntas-contenido {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -610,7 +610,7 @@
 }
 
 @media (max-width:768px) {
-    .preguntas-rapidas .container-max {
+    .preguntas-contenido {
         grid-template-columns: 1fr;
         gap: 24px
     }

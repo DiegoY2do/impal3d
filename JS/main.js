@@ -9,6 +9,10 @@ import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderContactForm } from './components/contactform.js';
 import { initContactForm } from './components/contact-validation.js';
+import { renderPreguntasRapidas } from './components/preguntasrapidas.js';
+
+const preguntas = document.querySelector('#preguntas-rapidas');
+preguntas.innerHTML = renderPreguntasRapidas();
 
 
 const header = document.querySelector('#header');

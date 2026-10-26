@@ -59,8 +59,8 @@ export function renderNavbar() {
             </div>
 
             <a class="store-link" href="#personalizados">Personalizados</a>
-            <a class="store-link" href="#about">Nosotros</a>
-            <a class="store-link" href="#contacto">Contacto</a>
+            <a class="store-link" href="./about.html">Nosotros</a>
+            <a class="store-link" href="./contacto.html">Contacto</a>
           </div>
 
           <form class="store-search" role="search">

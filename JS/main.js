@@ -9,6 +9,7 @@ import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderContactForm } from './components/contactform.js';
 
+
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
 

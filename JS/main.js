@@ -8,6 +8,7 @@ import { renderTeam } from './components/team.js';
 import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderContactForm } from './components/contactform.js';
+import { initContactForm } from './components/contact-validation.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -16,7 +17,10 @@ const contactform = document.querySelector('#contactform');
 
 if (contactform) {
     contactform.innerHTML = renderContactForm();
-}
+    
+    initContactForm();
+}   
+
 
 const abouthero = document.querySelector('#abouthero');
 abouthero.innerHTML = renderAboutHero();

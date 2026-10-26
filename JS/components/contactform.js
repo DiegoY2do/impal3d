@@ -18,7 +18,7 @@ export function renderContactForm() {
 
         <div class="contact-card">
 
-            <form id="contactForm" class="contact-form">
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdeeelej" method="POST">
 
                 <div class="contact-field">
                     <label for="nombre" class="form-label">Nombre completo</label>
@@ -40,8 +40,8 @@ export function renderContactForm() {
                     <label for="telefono" class="form-label">Teléfono</label>
                     <input type="tel" class="form-control" id="telefono"
                     name="telefono" placeholder="55 0000 0000"
-                    autocomplete="tel" inputmode="numeric"
-                    maxlength="14" required>
+                    inputmode="numeric" pattern="[0-9]{10}" minlength="10"
+                    maxlength="10" required>
                     <div class="invalid-feedback">Ingresa un teléfono de 10 dígitos.</div>
                 </div>
 
@@ -101,7 +101,8 @@ export function renderContactForm() {
                 </div>
                 <div>
                     <h3>Taller y dirección</h3>
-                    <p>[Calle y número, Colonia, Ciudad, CP]</p>
+                    <p>Utopía Tezontli, San AntonioUtopía Tezontli, San Antonio, Iztapalapa, 
+                    09900 Ciudad de México, CDMX, Iztapalapa, 09900 Ciudad de México, CDMX</p>
                 </div>
             </div>
 
@@ -112,7 +113,7 @@ export function renderContactForm() {
                 </div>
                 <div>
                     <h3>Teléfono y WhatsApp</h3>
-                    <p>[+52 56 4196 4434]</p>
+                    <p>+52 56 4196 4434</p>
                 </div>
             </div>
 

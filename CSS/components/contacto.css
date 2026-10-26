@@ -392,6 +392,55 @@
     color: white;
 }
 
+.contact-status[hidden] {
+    display: none !important;
+}
+
+/* Mensaje de éxito */
+
+.contact-status-success {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #d1fae5;
+    color: #065f46;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-status-success i {
+    color: #059669;
+    font-size: 18px;
+}
+
+/* Mensaje de error */
+
+.contact-status-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #fee2e2;
+    color: #991b1b;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
 /* Tablet */
 
 @media (max-width: 991px) {

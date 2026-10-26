@@ -3,7 +3,6 @@ export function renderContactForm() {
 <section class="contact-section">
 <div class="container contact-container">
 
-    <!-- ENCABEZADO -->
     <div class="contact-hero">
         <div class="contact-breadcrumb">
             <a href="index.html">Inicio</a>
@@ -15,15 +14,12 @@ export function renderContactForm() {
         <p>Cotizaciones, pedidos personalizados, dudas o soporte. Te respondemos en menos de un día hábil.</p>
     </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <div class="contact-layout">
 
-        <!-- FORMULARIO -->
         <div class="contact-card">
 
             <form id="contactForm" class="contact-form">
 
-                <!-- NOMBRE -->
                 <div class="contact-field">
                     <label for="nombre" class="form-label">Nombre completo</label>
                     <input type="text" class="form-control" id="nombre"
@@ -32,7 +28,6 @@ export function renderContactForm() {
                     <div class="invalid-feedback">Ingresa tu nombre completo.</div>
                 </div>
 
-                <!-- CORREO -->
                 <div class="contact-field">
                     <label for="correo" class="form-label">Correo electrónico</label>
                     <input type="email" class="form-control" id="correo"
@@ -41,7 +36,6 @@ export function renderContactForm() {
                     <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
                 </div>
 
-                <!-- TELÉFONO -->
                 <div class="contact-field">
                     <label for="telefono" class="form-label">Teléfono</label>
                     <input type="tel" class="form-control" id="telefono"
@@ -51,7 +45,6 @@ export function renderContactForm() {
                     <div class="invalid-feedback">Ingresa un teléfono de 10 dígitos.</div>
                 </div>
 
-                <!-- ASUNTO -->
                 <div class="contact-field">
                     <label for="asunto" class="form-label">Asunto</label>
                     <select class="form-select" id="asunto" name="asunto" required>
@@ -59,12 +52,10 @@ export function renderContactForm() {
                         <option value="cotizacion">Cotización de pieza personalizada</option>
                         <option value="pedido">Seguimiento de pedido</option>
                         <option value="informacion">Información general</option>
-                        <option value="soporte">Soporte técnico</option>
                     </select>
                     <div class="invalid-feedback">Selecciona un asunto.</div>
                 </div>
 
-                <!-- MENSAJE -->
                 <div class="contact-field contact-full">
                     <label for="mensaje" class="form-label">Mensaje</label>
                     <textarea class="form-control" id="mensaje"
@@ -74,7 +65,6 @@ export function renderContactForm() {
                     <div class="invalid-feedback">Escribe un mensaje de al menos 10 caracteres.</div>
                 </div>
 
-                <!-- PRIVACIDAD -->
                 <div class="contact-full">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox"
@@ -86,14 +76,12 @@ export function renderContactForm() {
                     </div>
                 </div>
 
-                <!-- BOTÓN -->
                 <div class="contact-full">
                     <button type="submit" class="btn contact-btn" id="contactSubmit">
                         Enviar mensaje
                     </button>
                 </div>
 
-                <!-- RESPUESTA DEL SERVIDOR -->
                 <div class="contact-full">
                     <div id="contactStatus" class="contact-status"
                     role="status" aria-live="polite" hidden></div>
@@ -103,10 +91,10 @@ export function renderContactForm() {
 
         </div>
 
-        <!-- INFORMACIÓN DE CONTACTO -->
+        <!-- Información de contacto -->
         <aside class="contact-sidebar">
 
-            <!-- DIRECCIÓN -->
+            <!-- Dirección -->
             <div class="contact-info-card">
                 <div class="contact-icon">
                     <i class="bi bi-geo-alt"></i>
@@ -117,29 +105,29 @@ export function renderContactForm() {
                 </div>
             </div>
 
-            <!-- TELÉFONO -->
+            <!-- Teléfono -->
             <div class="contact-info-card">
                 <div class="contact-icon">
                     <i class="bi bi-telephone"></i>
                 </div>
                 <div>
                     <h3>Teléfono y WhatsApp</h3>
-                    <p>[+52 00 0000 0000]</p>
+                    <p>[+52 56 4196 4434]</p>
                 </div>
             </div>
 
-            <!-- CORREO -->
+            <!-- Correo -->
             <div class="contact-info-card">
                 <div class="contact-icon">
                     <i class="bi bi-envelope"></i>
                 </div>
                 <div>
                     <h3>Correo</h3>
-                    <p>hola@tu-dominio.mx</p>
+                    <p>hola@impai3d.com</p>
                 </div>
             </div>
 
-            <!-- HORARIO -->
+            <!-- Horario -->
             <div class="contact-info-card">
                 <div class="contact-icon">
                     <i class="bi bi-clock"></i>
@@ -150,24 +138,21 @@ export function renderContactForm() {
                 </div>
             </div>
 
-            <!-- REDES SOCIALES -->
+            <!-- Redes -->
             <div class="contact-social-card">
 
                 <h3>¿Prefieres escribirnos directo?</h3>
                 <p>Resolvemos dudas y cotizamos por WhatsApp de lunes a sábado.</p>
 
                 <div class="contact-social-buttons">
-                    <a href="#" class="contact-whatsapp-btn">
+                    <a href="https://wa.me/525641964434?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20en%20IMP%20AL3D." class="contact-whatsapp-btn"> 
                         Abrir WhatsApp
                     </a>
+                    
+                    <a href="https://www.instagram.com/imp_al3d?srtk=MTI0bGZxc2FrMHVsOQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="btn-instagram">IG</a>
+                   
 
-                    <a href="#" class="contact-social-btn" aria-label="Instagram">
-                        IG
-                    </a>
-
-                    <a href="#" class="contact-social-btn" aria-label="Facebook">
-                        FB
-                    </a>
+                    <a href="https://www.facebook.com/share/1F7bRgmSxr/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="btn-facebook">FB</a>
                 </div>
 
             </div>

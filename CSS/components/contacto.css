@@ -11,7 +11,6 @@
     padding: 0 24px;
 }
 
-/* ENCABEZADO */
 
 .contact-hero {
     margin-bottom: 32px;
@@ -47,8 +46,6 @@
     margin: 0;
 }
 
-/* DISTRIBUCIÓN PRINCIPAL */
-
 .contact-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
@@ -56,7 +53,7 @@
     align-items: start;
 }
 
-/* TARJETA FORMULARIO */
+/* Tarjeta formulario */
 
 .contact-card {
     min-width: 0;
@@ -65,9 +62,6 @@
     border-radius: 18px;
     padding: 32px;
 }
-
-/* DISTRIBUCIÓN DE CAMPOS */
-
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -82,7 +76,6 @@
     grid-column: 1 / -1;
 }
 
-/* ETIQUETAS */
 
 .contact-card .form-label {
     display: block;
@@ -93,7 +86,6 @@
     margin-bottom: 7px;
 }
 
-/* INPUTS */
 
 .contact-card .form-control,
 .contact-card .form-select {
@@ -113,7 +105,6 @@
     color: var(--neutro-400);
 }
 
-/* FOCUS */
 
 .contact-card .form-control:focus,
 .contact-card .form-select:focus {
@@ -124,14 +115,12 @@
     outline: none;
 }
 
-/* TEXTAREA */
 
 .contact-card textarea.form-control {
     min-height: 138px;
     resize: vertical;
 }
 
-/* VALIDACIONES */
 
 .contact-card .form-control.is-invalid,
 .contact-card .form-select.is-invalid {
@@ -150,7 +139,7 @@
     display: block;
 }
 
-/* CHECKBOX */
+/* Checkbox */
 
 .contact-card .form-check {
     display: flex;
@@ -189,7 +178,7 @@
     text-decoration: underline;
 }
 
-/* BOTÓN */
+/* Botón */
 
 .contact-card .contact-btn {
     width: 100%;
@@ -216,7 +205,7 @@
     cursor: not-allowed;
 }
 
-/* MENSAJES DEL FORMULARIO */
+/* Mensajes del formulario */
 
 .contact-status {
     padding: 12px 14px;
@@ -244,7 +233,7 @@
     color: var(--morado-800);
 }
 
-/* TARJETAS LATERALES */
+/* Tarjetas laterales */
 
 .contact-sidebar {
     min-width: 0;
@@ -294,7 +283,7 @@
     overflow-wrap: anywhere;
 }
 
-/* TARJETA WHATSAPP */
+/* Tarjeta WhatsApp */
 
 .contact-social-card {
     background: var(--neutro-950);
@@ -361,7 +350,49 @@
     color: var(--neutro-0);
 }
 
-/* RESPONSIVE TABLET */
+/* Contenedor de botones */
+.contact-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Estilos de Instagram y Facebook */
+.btn-instagram,
+.btn-facebook {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Instagram */
+.btn-instagram {
+    background-color: #24242e;
+}
+
+/* Facebook */
+.btn-facebook {
+    background-color: #24242e;
+}
+
+/* Efecto */
+.btn-instagram:hover,
+.btn-facebook:hover {
+    opacity: 0.85;
+    color: white;
+}
+
+/* Tablet */
 
 @media (max-width: 991px) {
     .contact-layout {
@@ -373,7 +404,7 @@
     }
 }
 
-/* RESPONSIVE MÓVIL */
+/* Móvil */
 
 @media (max-width: 575px) {
     .contact-section {

@@ -7,6 +7,14 @@ import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderContactForm } from './components/contactform.js';
 import { renderPreguntasRapidas} from "./components/preguntasrapidas.js";
+import { initContactForm } from './components/contact-validation.js';
+
+const contactform = document.querySelector('#contactform');
+
+if (contactform) {
+    contactform.innerHTML = renderContactForm();
+    initContactForm();
+}
 
 const preguntas = document.querySelector('#preguntas-rapidas');
 

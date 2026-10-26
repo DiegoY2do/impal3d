@@ -1,1 +1,10 @@
-﻿// Se actualiza la conexión con la base de datos Impal3D
+﻿# impal3d
+# Fotos
+# Elizabeth - Pruebas de equipo error 373 
+# André
+# David 
+# Emanuel
+# Eric 
+# isaac
+# Julio
+# Vicman 

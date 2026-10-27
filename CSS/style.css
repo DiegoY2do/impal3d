@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
+@import url('./components/contacto.css');
+@import url('./components/about.css');
+@import url('./components/header.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --font-heading:'Sora',Sans-serif;
+    --font-body:'DM Sans',Sans-serif;
+    --morado-900:#271D5E;
+    --morado-800:#382B87;
+    --morado-700:#4A38B0;
+    --morado-600:#5F4BD6;
+    --morado-500:#7B68EE;
+    --morado-400:#9686F2;
+    --morado-300:#B3A7F7;
+    --morado-200:#CEC6FA;
+    --morado-100:#E6E2FD;
+    --morado-50:#F3F1FE;
+    /* Turquesa (acento secundario) */
+    --turquesa-100: #DDF8F5;
+    --turquesa-300: #7FE3D8;
+    --turquesa-500: #23C9B7;
+    --turquesa-700: #14877B;
+    --turquesa-900: #0B4A43;
+
+    /* Neutros */
+    --neutro-0:   #FFFFFF;
+    --neutro-50:  #F8F8FA;
+    --neutro-100: #EFEFF3;
+    --neutro-200: #E1E1E8;
+    --neutro-300: #C9C9D3;
+    --neutro-400: #9A9AA8;
+    --neutro-500: #6E6E7C;
+    --neutro-600: #4F4F5C;
+    --neutro-700: #363641;
+    --neutro-800: #22222B;
+    --neutro-900: #14141A;
+    --neutro-950: #0A0A0D;
+
+    /* Semánticos */
+    --exito:  #2FB67C;
+    --alerta: #F5B544;
+    --error:  #E5484D;
+    --info:   #4C9BF0;
+}
+
+body{
+    background: var(--neutro-50);
+}
+
+a{
+    text-decoration: none;
+}
+h1,h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700;
+    color: var(--neutro-950);
+}
+
+p{
+    color: var(--neutro-900);
+    font-size: clamp(18px, 1.4vw, 20px);
+}
+
+.container-max{
+    width: 90%;
+    max-width: 1600px;
+}
+
+.badge-morado{
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.25vw, 16px);
+    color: var(--morado-800);
+    font-weight: 700;
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.btn-primary, .btn-secundary{
+    display: inline-block;
+    padding: 10px 20px ;
+    font-family: var(--font-heading);
+    font-size: clamp(15px, 1.25vw, 16px);
+    border-radius: 14px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary{
+    background: var(--morado-600);
+    border: 1px solid var(--morado-600);
+    color: var(--neutro-0);
+}
+.btn-primary:hover{
+    background: var(--morado-900);
+    transform: translateY(-10px);
+
+}
+.btn-secundary{
+    background: transparent;
+    border: 1px solid var(--neutro-300);
+    color: var(--neutro-900);
+}
+.btn-secundary:hover{
+    background: var(--neutro-950);
+    transform: translateY(-10px);
+    border: 1px solid var(--neutro-950);
+    color: var(--neutro-0);
+}
+

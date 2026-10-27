@@ -1,0 +1,633 @@
+/* Todos los estilos del contact van aquí */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--neutro-50);
+    padding: 50px 0;
+    font-family: var(--font-body);
+}
+
+.contact-hero {
+    margin-bottom: 32px;
+}
+
+.contact-breadcrumb {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--neutro-800);
+    margin-bottom: 20px;
+}
+
+.contact-breadcrumb a {
+    color: var(--neutro-500);
+}
+
+.contact-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 3.5vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    color: var(--neutro-950);
+    margin-bottom: 12px;
+}
+
+.contact-hero p {
+    max-width: 550px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--neutro-500);
+    margin: 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+/* Tarjetas formularios */
+
+.contact-card {
+    min-width: 0;
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 18px;
+    padding: 32px;
+}
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 16px;
+}
+
+.contact-field {
+    min-width: 0;
+}
+
+.contact-full {
+    grid-column: 1 / -1;
+}
+
+
+.contact-card .form-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--neutro-950);
+    margin-bottom: 7px;
+}
+
+
+.contact-card .form-control,
+.contact-card .form-select {
+    width: 100%;
+    min-height: 44px;
+    background: var(--neutro-0);
+    color: var(--neutro-900);
+    border: 1px solid var(--neutro-300);
+    border-radius: 9px;
+    padding: 10px 13px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card .form-control::placeholder {
+    color: var(--neutro-400);
+}
+
+
+.contact-card .form-control:focus,
+.contact-card .form-select:focus {
+    background: var(--neutro-0);
+    color: var(--neutro-900);
+    border-color: var(--morado-600);
+    box-shadow: 0 0 0 2px var(--morado-100);
+    outline: none;
+}
+
+
+.contact-card textarea.form-control {
+    min-height: 138px;
+    resize: vertical;
+}
+
+
+.contact-card .form-control.is-invalid,
+.contact-card .form-select.is-invalid {
+    border-color: var(--error);
+    box-shadow: none;
+}
+
+.contact-card .invalid-feedback {
+    display: none;
+    color: var(--error);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.contact-card .is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Checkbox */
+
+.contact-card .form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.contact-card .form-check-input {
+    position: static;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.contact-card .form-check-input:checked {
+    background: var(--morado-600);
+    border-color: var(--morado-600);
+}
+
+.contact-card .form-check-label {
+    font-size: 12px;
+    color: var(--neutro-500);
+}
+
+.contact-privacy-link {
+    color: var(--morado-600);
+    font-weight: 600;
+}
+
+.contact-privacy-link:hover {
+    color: var(--morado-900);
+    text-decoration: underline;
+}
+
+/* Botón */
+
+.contact-card .contact-btn {
+    width: 100%;
+    min-height: 47px;
+    background: var(--morado-600);
+    color: var(--neutro-0);
+    border: none;
+    border-radius: 9px;
+    padding: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.contact-card .contact-btn:hover {
+    background: var(--morado-800);
+    color: var(--neutro-0);
+    transform: none;
+}
+
+.contact-card .contact-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Mensajes del formulario */
+
+.contact-status {
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.contact-status[hidden] {
+    display: none;
+}
+
+.contact-status.success {
+    background: #E5F6EF;
+    color: #147D58;
+}
+
+.contact-status.error {
+    background: #FDEBEC;
+    color: #B4232A;
+}
+
+.contact-status.info {
+    background: var(--morado-50);
+    color: var(--morado-800);
+}
+
+/* Tarjetas laterales */
+
+.contact-sidebar {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 82px;
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 17px;
+    padding: 16px 20px;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    background: var(--morado-50);
+    color: var(--morado-600);
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.contact-info-card h3 {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--neutro-950);
+    margin: 0 0 4px;
+}
+
+.contact-info-card p {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--neutro-500);
+    line-height: 1.4;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Tarjeta WhatsApp */
+
+.contact-social-card {
+    background: var(--neutro-950);
+    border-radius: 18px;
+    padding: 23px;
+}
+
+.contact-social-card h3 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--neutro-0);
+    margin-bottom: 10px;
+}
+
+.contact-social-card p {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--neutro-300);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.contact-social-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.contact-whatsapp-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px;
+    background: var(--morado-400);
+    color: var(--neutro-950);
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-whatsapp-btn:hover {
+    background: var(--morado-300);
+    color: var(--neutro-950);
+}
+
+.contact-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    min-height: 42px;
+    background: var(--neutro-800);
+    color: var(--neutro-0);
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.contact-social-btn:hover {
+    background: var(--morado-600);
+    color: var(--neutro-0);
+}
+
+/* Contenedor de botones */
+.contact-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Estilos de Instagram y Facebook */
+.btn-instagram,
+.btn-facebook {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Instagram */
+.btn-instagram {
+    background-color: #24242e;
+}
+
+/* Facebook */
+.btn-facebook {
+    background-color: #24242e;
+}
+
+/* Efecto */
+.btn-instagram:hover,
+.btn-facebook:hover {
+    opacity: 0.85;
+    color: white;
+}
+
+.contact-status[hidden] {
+    display: none !important;
+}
+
+/* Mensaje de éxito */
+
+.contact-status-success {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #d1fae5;
+    color: #065f46;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-status-success i {
+    color: #059669;
+    font-size: 18px;
+}
+
+/* Mensaje de error */
+
+.contact-status-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #fee2e2;
+    color: #991b1b;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        max-width: 760px;
+    }
+}
+
+/* Móvil */
+
+@media (max-width: 575px) {
+    .contact-section {
+        padding: 24px 0 45px;
+    }
+
+    .contact-container {
+        padding: 0 16px;
+    }
+
+    .contact-hero h1 {
+        font-size: 29px;
+        letter-spacing: -1px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card {
+        padding: 15px;
+    }
+
+    .contact-social-card {
+        padding: 20px;
+    }
+}
+
+.contact-card input:-webkit-autofill,
+.contact-card input:-webkit-autofill:hover,
+.contact-card input:-webkit-autofill:focus,
+.contact-card textarea:-webkit-autofill,
+.contact-card select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    -webkit-text-fill-color: #14141A !important;
+    caret-color: #14141A;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* Mapa alineado con la tarjeta del formulario */
+#ubicacion {
+    width: calc(100% - 40px);
+    max-width: 1320px;
+    margin: 40px auto !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#ubicacion .mapa-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e2e2eb;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#ubicacion .mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    #ubicacion {
+        width: calc(100% - 32px);
+    }
+
+    #ubicacion .mapa-container iframe {
+        height: 250px;
+    }
+}
+
+/* Preguntas rápidas */
+.preguntas-rapidas {
+    padding: 60px 0;
+    font-family: var(--font-body);
+}
+
+.preguntas-contenido {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.pregunta {
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 16px;
+    padding: 20px 24px;
+}
+
+.pregunta summary {
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--neutro-900);
+}
+
+.pregunta p {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--neutro-500);
+}
+
+.preguntas-lista {
+    display: grid;
+    gap: 12px;
+}
+
+.pregunta summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+.pregunta summary::-webkit-details-marker {
+    display: none;
+}
+
+.pregunta summary::after {
+    content: "+";
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--morado-50);
+    color: var(--morado-600);
+    font-size: 22px;
+}
+
+.pregunta[open] summary::after {
+    content: "-";
+}
+
+.pregunta summary:focus-visible {
+    outline: 2px solid var(--morado-600);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+@media (max-width:768px) {
+    .preguntas-contenido {
+        grid-template-columns: 1fr;
+        gap: 24px
+    }
+    
+    .preguntas-rapidas {
+        padding: 40px 0;
+    }
+}
+
+.preguntas-texto h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.preguntas-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--neutro-500);
+}
+/* Aquí termina sección de preguntas rápidas */

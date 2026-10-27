@@ -5,7 +5,7 @@ export function renderFooter(){
           
 
         <!-- Suscripción -->
-        <section class="newsletter" >
+        <section class="newsletter"  >
           <div class="newsletter-content">
             <h3>Únete a la comunidad imp_al3d</h3>
             <p>
@@ -17,7 +17,7 @@ export function renderFooter(){
           <form id="form-newsletter" action="" method="post" class="news-form" >
             <input class="correo" type="email" name="email" placeholder="Tu correo electrónico"
               aria-label="Tu correo electrónico" required>
-            <button type="submit" class="btn-suscribir">
+            <button id="btn-newsletter" type="submit" class="btn-suscribir">
               Suscribirme
             </button>
           </form>

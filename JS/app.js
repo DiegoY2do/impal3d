@@ -4,7 +4,7 @@ const API_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
 
 const form = document.getElementById("form-newsletter");
 const mensaje = document.getElementById("mensaje");
-const boton = form.querySelector("button");
+const boton = form.querySelector("#btn-newsletter");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();

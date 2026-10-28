@@ -1,11 +1,29 @@
-/* Todos los estilos del contact van aquí */
+/* ==========================================================================
+   CONTACTO — estilos de la página "Contacto"
+
+   Las secciones van en el mismo orden que en contacto.html:
+
+   1. Formulario de contacto ... #contactform
+   2. Ubicación ................ #ubicacion
+   3. Preguntas rápidas ........ #preguntas-rapidas
+
+   Cada sección tiene su INICIO y su FIN, y sus media queries
+   van al final de la propia sección.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   [INICIO] 1. FORMULARIO DE CONTACTO — #contactform
+   ========================================================================== */
+
+/* ---------- Contenedor y encabezado ---------- */
 
 .contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--neutro-50);
-    padding: 50px 0;
+    padding: 80px 0;
     font-family: var(--font-body);
 }
 
@@ -50,7 +68,7 @@
     align-items: start;
 }
 
-/* Tarjetas formularios */
+/* ---------- Tarjeta del formulario ---------- */
 
 .contact-card {
     min-width: 0;
@@ -59,6 +77,7 @@
     border-radius: 18px;
     padding: 32px;
 }
+
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -73,6 +92,7 @@
     grid-column: 1 / -1;
 }
 
+/* ---------- Campos ---------- */
 
 .contact-card .form-label {
     display: block;
@@ -82,7 +102,6 @@
     color: var(--neutro-950);
     margin-bottom: 7px;
 }
-
 
 .contact-card .form-control,
 .contact-card .form-select {
@@ -102,7 +121,6 @@
     color: var(--neutro-400);
 }
 
-
 .contact-card .form-control:focus,
 .contact-card .form-select:focus {
     background: var(--neutro-0);
@@ -112,13 +130,12 @@
     outline: none;
 }
 
-
 .contact-card textarea.form-control {
-    min-height: 138px;
-    resize: vertical;
+    min-height: 150px;
+    resize: none;
 }
 
-
+/* Estado de error (va después de :focus para que el rojo gane) */
 .contact-card .form-control.is-invalid,
 .contact-card .form-select.is-invalid {
     border-color: var(--error);
@@ -136,7 +153,19 @@
     display: block;
 }
 
-/* Checkbox */
+/* Autocompletado del navegador (Chrome) */
+.contact-card input:-webkit-autofill,
+.contact-card input:-webkit-autofill:hover,
+.contact-card input:-webkit-autofill:focus,
+.contact-card textarea:-webkit-autofill,
+.contact-card select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    -webkit-text-fill-color: #14141A !important;
+    caret-color: #14141A;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ---------- Checkbox y aviso de privacidad ---------- */
 
 .contact-card .form-check {
     display: flex;
@@ -175,7 +204,7 @@
     text-decoration: underline;
 }
 
-/* Botón */
+/* ---------- Botón de enviar ---------- */
 
 .contact-card .contact-btn {
     width: 100%;
@@ -202,7 +231,7 @@
     cursor: not-allowed;
 }
 
-/* Mensajes del formulario */
+/* ---------- Mensajes del formulario ---------- */
 
 .contact-status {
     padding: 12px 14px;
@@ -212,7 +241,7 @@
 }
 
 .contact-status[hidden] {
-    display: none;
+    display: none !important;
 }
 
 .contact-status.success {
@@ -230,7 +259,50 @@
     color: var(--morado-800);
 }
 
-/* Tarjetas laterales */
+/* Mensaje de éxito */
+.contact-status-success {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #d1fae5;
+    color: #065f46;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-status-success i {
+    color: #059669;
+    font-size: 18px;
+}
+
+/* Mensaje de error */
+.contact-status-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 14px 18px;
+
+    background-color: #fee2e2;
+    color: #991b1b;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- Barra lateral: tarjetas de contacto ---------- */
 
 .contact-sidebar {
     min-width: 0;
@@ -280,7 +352,7 @@
     overflow-wrap: anywhere;
 }
 
-/* Tarjeta WhatsApp */
+/* ---------- Barra lateral: tarjeta de WhatsApp y redes ---------- */
 
 .contact-social-card {
     background: var(--neutro-950);
@@ -354,7 +426,7 @@
     align-items: center;
 }
 
-/* Estilos de Instagram y Facebook */
+/* Instagram y Facebook */
 .btn-instagram,
 .btn-facebook {
     display: inline-flex;
@@ -372,74 +444,23 @@
     font-weight: bold;
 }
 
-/* Instagram */
 .btn-instagram {
     background-color: #24242e;
 }
 
-/* Facebook */
 .btn-facebook {
     background-color: #24242e;
 }
 
-/* Efecto */
 .btn-instagram:hover,
 .btn-facebook:hover {
     opacity: 0.85;
     color: white;
 }
 
-.contact-status[hidden] {
-    display: none !important;
-}
-
-/* Mensaje de éxito */
-
-.contact-status-success {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-top: 20px;
-    padding: 14px 18px;
-
-    background-color: #d1fae5;
-    color: #065f46;
-
-    border: 1px solid #a7f3d0;
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.contact-status-success i {
-    color: #059669;
-    font-size: 18px;
-}
-
-/* Mensaje de error */
-
-.contact-status-error {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-top: 20px;
-    padding: 14px 18px;
-
-    background-color: #fee2e2;
-    color: #991b1b;
-
-    border: 1px solid #fecaca;
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: 500;
-}
+/* ---------- Responsive ---------- */
 
 /* Tablet */
-
 @media (max-width: 991px) {
     .contact-layout {
         grid-template-columns: 1fr;
@@ -451,7 +472,6 @@
 }
 
 /* Móvil */
-
 @media (max-width: 575px) {
     .contact-section {
         padding: 24px 0 45px;
@@ -487,66 +507,167 @@
     }
 }
 
-.contact-card input:-webkit-autofill,
-.contact-card input:-webkit-autofill:hover,
-.contact-card input:-webkit-autofill:focus,
-.contact-card textarea:-webkit-autofill,
-.contact-card select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
-    -webkit-text-fill-color: #14141A !important;
-    caret-color: #14141A;
-    transition: background-color 5000s ease-in-out 0s;
-}
+/* [FIN] 1. FORMULARIO DE CONTACTO */
 
 
-/* Mapa alineado con la tarjeta del formulario */
-#ubicacion {
-    width: calc(100% - 40px);
-    max-width: 1320px;
-    margin: 40px auto !important;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ==========================================================================
+   [INICIO] 2. UBICACIÓN — #ubicacion
+   ========================================================================== */
 
-#ubicacion .mapa-container {
+.ubicacion {
     width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid #e2e2eb;
-    border-radius: 20px;
-    box-sizing: border-box;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-body);
 }
 
-#ubicacion .mapa-container iframe {
+.ubicacion-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ubicacion-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ubicacion-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--neutro-500);
+}
+
+/* Mapa */
+.mapa-contenedor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--neutro-100);
+    border: 1px solid var(--neutro-200);
+    border-radius: 28px;
+}
+
+.mapa-contenedor iframe {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 400px;
     border: 0;
 }
 
-@media (max-width: 600px) {
-    #ubicacion {
-        width: calc(100% - 32px);
+/* Tarjeta flotante (bottom alto para no tapar el logo de Google) */
+.mapa-tarjeta {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+    background: var(--neutro-0);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(20, 20, 26, 0.12);
+}
+
+.mapa-tarjeta h3 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--neutro-950);
+}
+
+.mapa-tarjeta p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--neutro-500);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ubicacion {
+        padding: 40px 0;
     }
 
-    #ubicacion .mapa-container iframe {
-        height: 250px;
+    .mapa-contenedor iframe {
+        height: 300px;
+    }
+
+    /* En móvil la tarjeta va debajo del mapa para no taparlo */
+    .mapa-tarjeta {
+        position: static;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: 1px solid var(--neutro-200);
     }
 }
 
-/* Preguntas rápidas */
+/* [FIN] 2. UBICACIÓN */
+
+
+/* ==========================================================================
+   [INICIO] 3. PREGUNTAS RÁPIDAS — #preguntas-rapidas
+   ========================================================================== */
+
 .preguntas-rapidas {
-    padding: 60px 0;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-body);
 }
 
 .preguntas-contenido {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: start;
+}
+
+/* Columna izquierda */
+.preguntas-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.preguntas-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--neutro-500);
+}
+
+.link-flecha {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--morado-600);
+    transition: color 0.3s ease;
+}
+
+.link-flecha span {
+    transition: transform 0.3s ease;
+}
+
+.link-flecha:hover {
+    color: var(--morado-900);
+}
+
+.link-flecha:hover span {
+    transform: translateX(4px);
+}
+
+/* Columna derecha */
+.preguntas-lista {
+    display: grid;
+    gap: 12px;
 }
 
 .pregunta {
@@ -557,29 +678,15 @@
 }
 
 .pregunta summary {
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--neutro-900);
-}
-
-.pregunta p {
-    margin-top: 16px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--neutro-500);
-}
-
-.preguntas-lista {
-    display: grid;
-    gap: 12px;
-}
-
-.pregunta summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
     list-style: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--neutro-900);
+    cursor: pointer;
 }
 
 .pregunta summary::-webkit-details-marker {
@@ -597,10 +704,11 @@
     background: var(--morado-50);
     color: var(--morado-600);
     font-size: 22px;
+    line-height: 1;
 }
 
 .pregunta[open] summary::after {
-    content: "-";
+    content: "−";
 }
 
 .pregunta summary:focus-visible {
@@ -609,25 +717,65 @@
     border-radius: 4px;
 }
 
-@media (max-width:768px) {
-    .preguntas-contenido {
-        grid-template-columns: 1fr;
-        gap: 24px
-    }
-    
-    .preguntas-rapidas {
-        padding: 40px 0;
-    }
-}
-
-.preguntas-texto h2 {
-    font-size: 15px;
-    margin-bottom: 12px;
-}
-
-.preguntas-texto p {
+.pregunta p {
+    margin-top: 16px;
     font-size: 15px;
     line-height: 1.6;
     color: var(--neutro-500);
 }
-/* Aquí termina sección de preguntas rápidas */
+
+/* Animación suave de las preguntas */
+.pregunta {
+    interpolate-size: allow-keywords;
+}
+
+.pregunta::details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, content-visibility 0.3s ease allow-discrete;
+}
+
+.pregunta[open]::details-content {
+    height: auto;
+}
+
+/* Entrada suave del texto (funciona en todos los navegadores) */
+.pregunta[open] p {
+    animation: pregunta-abrir 0.3s ease;
+}
+
+@keyframes pregunta-abrir {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .preguntas-rapidas {
+        padding: 40px 0;
+    }
+
+    .preguntas-contenido {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Menos movimiento (accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+    .pregunta::details-content {
+        transition: none;
+    }
+
+    .pregunta[open] p {
+        animation: none;
+    }
+}
+
+/* [FIN] 3. PREGUNTAS RÁPIDAS */

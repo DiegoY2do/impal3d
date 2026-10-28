@@ -8,7 +8,7 @@ import { renderTeam } from './components/team.js';
 import { renderCompromiso } from './components/compromiso.js';
 import { renderBrands } from './components/brands.js';
 import { renderAboutBanner } from './components/aboutbanner.js';
-
+import { initAnimaciones } from './animaciones.js';
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -45,3 +45,5 @@ if (footer) {
     
     renderFooter();
 }   
+
+initAnimaciones();

@@ -34,31 +34,31 @@ export function renderNavbar() {
 
             <div class="store-dropdown">
               <input type="checkbox" id="dropdown-productos" class="css-toggle store-dropdown__check">
-              <a class="store-link" href="#productos">Productos</a>
+              <a class="store-link" href="./index.html">Productos</a>
               <label for="dropdown-productos" class="store-dropdown__arrow" aria-label="Mostrar opciones de Productos">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </label>
               <ul class="store-submenu">
-                <li><a href="#productos">Categoría 1</a></li>
-                <li><a href="#productos">Categoría 2</a></li>
-                <li><a href="#productos">Categoría 3</a></li>
+                <li><a href="./index.html">Categoría 1</a></li>
+                <li><a href="./index.html">Categoría 2</a></li>
+                <li><a href="./index.html">Categoría 3</a></li>
               </ul>
             </div>
 
             <div class="store-dropdown">
               <input type="checkbox" id="dropdown-colecciones" class="css-toggle store-dropdown__check">
-              <a class="store-link" href="#colecciones">Colecciones</a>
+              <a class="store-link" href="./index.html">Colecciones</a>
               <label for="dropdown-colecciones" class="store-dropdown__arrow" aria-label="Mostrar opciones de Colecciones">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </label>
               <ul class="store-submenu">
-                <li><a href="#colecciones">Colección 1</a></li>
-                <li><a href="#colecciones">Colección 2</a></li>
-                <li><a href="#colecciones">Colección 3</a></li>
+                <li><a href="./index.html">Colección 1</a></li>
+                <li><a href="./index.html">Colección 2</a></li>
+                <li><a href="./index.html">Colección 3</a></li>
               </ul>
             </div>
 
-            <a class="store-link" href="#personalizados">Personalizados</a>
+            <a class="store-link" href="./index.html">Personalizados</a>
             <a class="store-link" href="./about.html">Nosotros</a>
             <a class="store-link" href="./contacto.html">Contacto</a>
           </div>
@@ -73,7 +73,7 @@ export function renderNavbar() {
           </form>
 
           <div class="store-actions">
-            <a class="store-action" href="#cuenta" aria-label="Mi cuenta">
+            <a class="store-action" href="./index.html" aria-label="Mi cuenta">
               <svg viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="1.6"
                    stroke-linecap="round" stroke-linejoin="round"
@@ -83,7 +83,7 @@ export function renderNavbar() {
               </svg>
             </a>
 
-            <a class="store-action" href="#favoritos" aria-label="Favoritos">
+            <a class="store-action" href="./index.html" aria-label="Favoritos">
               <svg viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="1.6"
                    stroke-linecap="round" stroke-linejoin="round"

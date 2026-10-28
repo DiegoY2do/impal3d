@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 40px;
+  padding: 20px 40px;
   background: var(--neutro-950);
   color: var(--neutro-0);
   text-align: center;
@@ -27,7 +27,7 @@
 .announcement-bar p {
   margin: 0;
   color: var(--neutro-0);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .announcement-bar strong {

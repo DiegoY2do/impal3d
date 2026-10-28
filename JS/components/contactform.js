@@ -95,38 +95,44 @@ export function renderContactForm() {
         <aside class="contact-sidebar">
 
             <!-- Dirección -->
-            <div class="contact-info-card">
-                <div class="contact-icon">
-                    <i class="bi bi-geo-alt"></i>
+            <a href="https://maps.app.goo.gl/yRexSCVTCf5VjEx47" target="_blank" rel="noopener noreferrer">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Taller y dirección</h3>
+                        <p>Utopía Tezontli, San AntonioUtopía Tezontli, San Antonio, Iztapalapa, 
+                        09900 Ciudad de México, CDMX, Iztapalapa, 09900 Ciudad de México, CDMX</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Taller y dirección</h3>
-                    <p>Utopía Tezontli, San AntonioUtopía Tezontli, San Antonio, Iztapalapa, 
-                    09900 Ciudad de México, CDMX, Iztapalapa, 09900 Ciudad de México, CDMX</p>
-                </div>
-            </div>
+            </a>
 
             <!-- Teléfono -->
-            <div class="contact-info-card">
-                <div class="contact-icon">
-                    <i class="bi bi-telephone"></i>
+            <a href="https://api.whatsapp.com/send/?phone=525641964434&text=Hola%2C+me+gustar%C3%ADa+solicitar+una+cotizaci%C3%B3n+en+IMP+AL3D.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                        <h3>Teléfono y WhatsApp</h3>
+                        <p>+52 56 4196 4434</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Teléfono y WhatsApp</h3>
-                    <p>+52 56 4196 4434</p>
-                </div>
-            </div>
+            </a>
 
             <!-- Correo -->
-            <div class="contact-info-card">
-                <div class="contact-icon">
-                    <i class="bi bi-envelope"></i>
+            <a href="mailto:hola@impai3d.com" target="_blank" rel="noopener noreferrer">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Correo</h3>
+                        <p>hola@impai3d.com</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Correo</h3>
-                    <p>hola@impai3d.com</p>
-                </div>
-            </div>
+            </a>
 
             <!-- Horario -->
             <div class="contact-info-card">
@@ -146,7 +152,7 @@ export function renderContactForm() {
                 <p>Resolvemos dudas y cotizamos por WhatsApp de lunes a sábado.</p>
 
                 <div class="contact-social-buttons">
-                    <a href="https://wa.me/525641964434?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20en%20IMP%20AL3D." class="contact-whatsapp-btn"> 
+                    <a  href="https://wa.me/525641964434?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20en%20IMP%20AL3D." target="_blank"  class="contact-whatsapp-btn"> 
                         Abrir WhatsApp
                     </a>
                     

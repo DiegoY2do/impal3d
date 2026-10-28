@@ -10,8 +10,8 @@ export function renderAboutBanner (){
                     <p> Cuéntanos qué tienes en mente y te respondemos en menos de un día hábil. </p>
 
                     <div class="container-btn">
-                        <a class="btn-primary" href="../../contacto.html" target="_self" rel="noopener noreferrer">Contáctanos</a>
-                        <a class="btn-secundary" href="../../index.html" target="_blank" rel="noopener noreferrer">Ver catálogo</a>
+                        <a class="btn-primary" href="./contacto.html" target="_self" rel="noopener noreferrer">Contáctanos</a>
+                        <a class="btn-secundary" href="./index.html" target="_self" rel="noopener noreferrer">Ver catálogo</a>
                     </div>
 
                 </div>

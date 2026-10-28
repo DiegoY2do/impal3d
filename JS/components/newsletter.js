@@ -1,16 +1,28 @@
 const API_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
   ? "http://localhost:3000"
-  : "https://lightcoral-stingray-699697.hostingersite.com/"; // Aqui va el url del backend cambiar cuando suba al servidor
+  : "https://moccasin-cattle-140361.hostingersite.com";
 
-const form = document.getElementById("form-newsletter");
-const mensaje = document.getElementById("mensaje");
-const boton = form.querySelector("#btn-newsletter");
+function getMessageEl(form) {
+  let msg = form.querySelector(".news-msg, #mensaje");
+  if (!msg) {
+    msg = document.createElement("p");
+    msg.className = "news-msg";
+    msg.setAttribute("aria-live", "polite");
+    form.appendChild(msg);
+  }
+  return msg;
+}
 
-form.addEventListener("submit", async (e) => {
+document.addEventListener("submit", async (e) => {
+  const form = e.target;
+  if (!form.matches("#form-newsletter, [data-newsletter]")) return;
   e.preventDefault();
+
+  const button = form.querySelector("button[type='submit']");
+  const mensaje = getMessageEl(form);
   const email = form.email.value.trim();
 
-  boton.disabled = true;
+  button.disabled = true;
   mensaje.textContent = "Enviando...";
 
   try {
@@ -26,6 +38,6 @@ form.addEventListener("submit", async (e) => {
   } catch {
     mensaje.textContent = "No se pudo enviar el correo. Intenta de nuevo.";
   } finally {
-    boton.disabled = false;
+    button.disabled = false;
   }
 });

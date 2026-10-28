@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
 @import url('./components/contacto.css');
 @import url('./components/about.css');
 @import url('./components/header.css');
 @import url('./components/contact.css');
 @import url('./components/footer.css');
+@import url('./components/hero-prev.css');
 
 *{
     padding:0;
@@ -11,6 +11,9 @@
     box-sizing:border-box;
 }
 
+html.js-anim body {
+    opacity: 0;
+}
 
 :root{
     --font-heading:'Sora',Sans-serif;

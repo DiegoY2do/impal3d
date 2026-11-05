@@ -1,4 +1,5 @@
 import { renderNavbar } from './components/header.js';
+<<<<<<< HEAD
 import { renderAboutHero } from './components/abouthero.js';
 import { renderStatics, initStatics } from './components/statistics.js';
 import { renderTimeline } from './components/timeline.js';
@@ -10,6 +11,11 @@ import { renderPreguntasRapidas} from "./components/preguntasrapidas.js";
 import { initContactForm } from './components/contact-validation.js';
 
 const contactform = document.querySelector('#contactform');
+=======
+import { renderFooter } from './components/footer.js';
+import { renderInicioHero } from './components/hero-pre.js';
+import { initAnimaciones } from './animaciones.js';
+>>>>>>> 5a4a4efed8ed70fb9aff55ce978b6414bd4ba9d3
 
 if (contactform) {
     contactform.innerHTML = renderContactForm();
@@ -28,3 +34,8 @@ header.innerHTML = renderNavbar();
 
 const footer = document.querySelector('#footer');
 footer.innerHTML = renderFooter();
+
+const prev = document.querySelector('#prev');
+prev.innerHTML = renderInicioHero();
+
+initAnimaciones();

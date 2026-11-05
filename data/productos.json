@@ -1,0 +1,129 @@
+[
+    {
+        "id":1, 
+        "nombre": "Coraline",
+        "colecciones": "Terror",
+        "precio": 50,
+        "agotado":true,
+        "desc": 20,
+        "descripcion": "Calavera decorativa con patrón Voronoi calado, impresa capa por capa en PLA+ seda dorado. Ligera, resistente y con juegos de luz y sombra que solo la impresión 3D hace posibles.",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    
+    {
+        "id":2, 
+        "nombre": "oogie boogie",
+        "colecciones": "Terror",
+        "precio": 50,
+        "nuevo": true,
+        "desc": 20,
+        "descripcion": "Figura inspirada en el fantastico mundo de Jack",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+     {
+        "id":3, 
+        "nombre": "Sam",
+        "colecciones": "Terror",
+        "precio": 50,
+        "nuevo": true,
+        "desc": 20,
+        "descripcion": "Figura impresa en 3D inspirada en la pelicula de Trick or treat ",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":4, 
+        "nombre": "Tiffany",
+        "colecciones": "Terror",
+        "precio": 50,
+        "agotado":true,
+        "descripcion": "La novia ideal para el Chucky que llevas dentro",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":5, 
+        "nombre": "Ghostface",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "wasaaaaa",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":6, 
+        "nombre": "Pennywise",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "Todos flotan",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":7, 
+        "nombre": "Michael Myers",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "No tiene prisa de todos modos sabe donde vives",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":8, 
+        "nombre": "Dr. Peste",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "Ni tiene el covid",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":9, 
+        "nombre": "Freddy Krueger",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "Duerme, que yo me encargo de arreglarte en la noche.",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+        
+    },
+    {
+        "id":10, 
+        "nombre": "Merlina",
+        "colecciones": "Terror",
+        "precio": 50,
+        "descripcion": "No soy antisocial, solamente la humanidad me parece decepcionante",
+        "tamaño": "5",
+        "imagenes": [
+           "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg" 
+        ]
+    }
+]

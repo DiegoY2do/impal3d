@@ -6,7 +6,6 @@ import { welcomeEmail } from "./emails/newsletter-bienvenida.js";
 
 const app = express();
 
-// Orígenes que pueden llamar a tu API (agrega tu dominio real más adelante)
 const allowedOrigins = [
   "http://127.0.0.1:5500",   // Live Server
   "http://localhost:5500",   // Live Server
@@ -16,7 +15,7 @@ const allowedOrigins = [
 app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
-// Dirección de tu sitio (para el botón del correo). Cámbiala en el .env cuando tengas dominio.
+
 const SITE_URL = process.env.SITE_URL || "https://lightcoral-stingray-699697.hostingersite.com/";
 
 const transporter = nodemailer.createTransport({

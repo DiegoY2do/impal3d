@@ -717,7 +717,6 @@
     border-radius: 4px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
     .preguntas-contenido {
         grid-template-columns: 1fr;
@@ -735,10 +734,16 @@
 }
 
 .preguntas-texto p {
-=======
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pregunta p {
+  margin-top: 16px;
+} 
+
 .pregunta p {
     margin-top: 16px;
->>>>>>> 5a4a4efed8ed70fb9aff55ce978b6414bd4ba9d3
     font-size: 15px;
     line-height: 1.6;
     color: var(--neutro-500);

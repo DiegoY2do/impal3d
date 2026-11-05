@@ -1,5 +1,4 @@
 // Correo de bienvenida al newsletter · IMP A13D
-// Maquetado con tablas + estilos en línea para que no se rompa en Outlook, Gmail, Apple Mail, etc.
 
 const welcomeEmail = ({
   siteUrl = "https://lightcoral-stingray-699697.hostingersite.com/",

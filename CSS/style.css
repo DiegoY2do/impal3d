@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
-
+@import url('./components/hero-prev.css');@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
 @import url('./components/contacto.css');
 @import url('./components/about.css');
 @import url('./components/header.css');
@@ -47,7 +47,7 @@
     --neutro-900: #14141A;
     --neutro-950: #0A0A0D;
 
-    /* Semánticos */
+    /* SemÃ¡nticos */
     --exito:  #2FB67C;
     --alerta: #F5B544;
     --error:  #E5484D;
@@ -121,4 +121,3 @@ p{
     border: 1px solid var(--neutro-950);
     color: var(--neutro-0);
 }
-

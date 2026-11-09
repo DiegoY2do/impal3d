@@ -1,4 +1,3 @@
-import { renderCarrusel } from "./carrusel.js";
 export function renderInicioHero() {
     return `
         <section class="hero-inicio">
@@ -25,7 +24,10 @@ export function renderInicioHero() {
                         </div>
                     </div>
 
-                    ${renderCarrusel()}
+                    <div class="inicio-img">
+                        <span class="inicio-etiqueta">Hecho en México</span>
+                        <img src="assets/img/banners/banner-about.webp" alt="Figuras y juguetes impresos en 3D por imp_al3d">
+                    </div>
                 </div>
             </div>
         </section>

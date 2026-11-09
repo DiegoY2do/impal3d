@@ -17,7 +17,6 @@ import { renderInicioHero } from './components/hero-pre.js';
 import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { initAnimaciones } from './animaciones.js';
-<<<<<<< HEAD
 
 
 if (contactform) {
@@ -30,8 +29,6 @@ const preguntas = document.querySelector('#preguntas-rapidas');
 if (preguntas) {
     preguntas.innerHTML = renderPreguntasRapidas();
 }
-=======
->>>>>>> 709e14add250e3850dbf54c65b4f6121dcd492a2
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();

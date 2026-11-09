@@ -5,6 +5,7 @@
 @import url('./components/footer.css');
 @import url('./components/hero-prev.css');
 @import url('./components/resenas.css');
+@import url('./components/benefits.css');
 
 *{
     padding:0;
@@ -79,6 +80,7 @@ p{
 .container-max{
     width: 90%;
     max-width: 1600px;
+    margin: 0 auto;
 }
 
 .badge-morado{

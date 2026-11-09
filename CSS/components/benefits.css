@@ -1,0 +1,107 @@
+
+/* BEneficios*/
+
+.benefits-container {
+    width: 100%;
+    padding: 24px 0;
+}
+
+/* GRID DE TARJETAS */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* TARJETAS */
+
+.benefits-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 14px;
+
+    background-color:var(--neutro-50);
+    border: 1px solid var(--neutro-300);
+    border-radius: 12px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.benefits-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--morado-600);
+}
+
+/* ICONOS */
+
+.benefits-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    background-color:var(--morado-100);
+    color: var(--morado-700);
+
+    font-size: 18px;
+}
+
+/* INFORMACIÓN */
+
+.benefits-info {
+    min-width: 0;
+}
+
+.benefits-info h3 {
+    margin: 0 0 3px;
+    font-family:var(--font-heading) ;
+    color:var(--neutro-800);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.benefits-info p {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--neutro-600);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/*Responsivo */
+
+/* TABLETS */
+
+@media (max-width: 991.98px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 575.98px) {
+    .benefits-container {
+        padding: 16px 0;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .benefits-card {
+        padding: 12px;
+    }
+}

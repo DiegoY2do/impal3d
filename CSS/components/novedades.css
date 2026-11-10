@@ -131,6 +131,16 @@
     font-size: 11px;
     color: var(--neutro-500);
 }
+.novedad-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.novedad-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 8px rgba(111, 76, 255, 0.5),
+        0 6px 18px rgba(111, 76, 255, 0.45);
+}
 
 /* ==========================================================================
    RESPONSIVE

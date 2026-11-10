@@ -9,6 +9,7 @@
 @import url('./components/home.css');
 @import url('./components/resenas.css');
 @import url('./components/benefits.css');
+@import url('./components/novedades.css');
 
 *{
     padding:0;

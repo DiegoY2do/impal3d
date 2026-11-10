@@ -18,6 +18,9 @@ import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { initAnimaciones } from './animaciones.js';
 
+import { renderBenefits } from './components/benefits.js';
+    
+
 
 if (contactform) {
     contactform.innerHTML = renderContactForm();
@@ -29,6 +32,7 @@ const preguntas = document.querySelector('#preguntas-rapidas');
 if (preguntas) {
     preguntas.innerHTML = renderPreguntasRapidas();
 }
+
 
 const header = document.querySelector('#header');
 header.innerHTML = renderNavbar();
@@ -47,7 +51,14 @@ initResenas();
 const prev = document.querySelector('#prev');
 prev.innerHTML = renderInicioHero();
 
+
+initAnimaciones();
+
+const benefits = document.querySelector('#benefits');
+benefits.innerHTML = renderBenefits();
+
 const carrusel = document.querySelector('#carrusel');
 carrusel.innerHTML = renderCarrusel();
 
 initAnimaciones();
+

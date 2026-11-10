@@ -16,10 +16,11 @@ import { renderSliderOfertas } from './components/SliderOfertas.js';
 import { renderInicioHero } from './components/hero-pre.js';
 import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
+import { renderNovedades } from './components/novedades.js';
 import { initAnimaciones } from './animaciones.js';
 
 import { renderBenefits } from './components/benefits.js';
-    
+
 
 
 if (contactform) {
@@ -59,6 +60,9 @@ benefits.innerHTML = renderBenefits();
 
 const carrusel = document.querySelector('#carrusel');
 carrusel.innerHTML = renderCarrusel();
+
+const novedades = document.querySelector('#novedades');
+novedades.innerHTML = renderNovedades();
 
 initAnimaciones();
 

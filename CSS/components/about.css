@@ -388,7 +388,6 @@
         top: 1px;
         left: 1px;
     }
-<<<<<<< HEAD
 }
 
 .compromiso-container{
@@ -397,8 +396,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-=======
->>>>>>> 5a4a4efed8ed70fb9aff55ce978b6414bd4ba9d3
 }
 
 /* [FIN] 4. LÍNEA DEL TIEMPO */
@@ -526,7 +523,6 @@
     }
 }
 
-<<<<<<< HEAD
 .brands-container{
   width: 100%;
   padding: 50px 0;
@@ -591,7 +587,6 @@
   }
 
   .brand-logos{
-=======
 /* [FIN] 5. EQUIPO */
 
 
@@ -600,7 +595,6 @@
    ========================================================================== */
 
 .compromiso-container {
->>>>>>> 5a4a4efed8ed70fb9aff55ce978b6414bd4ba9d3
     width: 100%;
     padding: 80px 0;
     display: flex;
@@ -615,12 +609,10 @@
     gap: 40px;
 }
 
-<<<<<<< HEAD
   .brand-item:last-child:nth-child(odd){
     grid-column: 1 / -1;
   }
 }
-=======
 .compromiso-card {
     padding: 40px 30px;
     background: var(--neutro-900);
@@ -959,5 +951,4 @@
     }
 }
 
-/* [FIN] 8. BANNER FINAL */
->>>>>>> 5a4a4efed8ed70fb9aff55ce978b6414bd4ba9d3
+}

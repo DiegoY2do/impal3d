@@ -1,0 +1,78 @@
+.promo-personalizadas {
+    padding: 60px 0;
+}
+
+.promo-caja {
+    background: var(--morado-600);
+    border-radius: 28px;
+    padding: clamp(28px, 4vw, 56px);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 32px;
+    overflow: hidden;
+}
+
+.promo-etiqueta {
+    display: inline-block;
+    background: var(--turquesa-300);
+    color: var(--turquesa-900);
+    font-family: var(--font-body);
+    font-size: clamp(13px, 1.1vw, 15px);
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.promo-texto h2 {
+    color: var(--neutro-0);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.promo-texto p {
+    color: var(--morado-50);
+    max-width: 44ch;
+    margin-bottom: 28px;
+}
+
+.promo-texto .container-btn {
+    justify-content: flex-start;
+}
+
+.promo-caja .btn-primary {
+    background: var(--neutro-0);
+    border-color: var(--neutro-0);
+    color: var(--morado-900);
+}
+
+.promo-caja .btn-primary:hover {
+    background: var(--morado-100);
+    border-color: var(--morado-100);
+    color: var(--morado-900);
+}
+
+.promo-fotos {
+    position: relative;
+    height: 280px;
+}
+
+.promo-fotos img {
+    position: absolute;
+    width: 46%;
+    height: 80%;
+    object-fit: cover;
+    border: 6px solid var(--neutro-0);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.promo-fotos img:nth-child(1) { left: 0;   top: 12%; transform: rotate(-4deg); z-index: 1; }
+.promo-fotos img:nth-child(2) { left: 27%; top: 0;   transform: rotate(3deg);  z-index: 2; }
+.promo-fotos img:nth-child(3) { right: 0;  top: 20%; transform: rotate(6deg);  z-index: 3; }
+
+@media (max-width: 768px) {
+    .promo-caja { grid-template-columns: 1fr; }
+    .promo-fotos { height: 220px; }
+}

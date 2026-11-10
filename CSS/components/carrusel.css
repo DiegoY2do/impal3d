@@ -133,9 +133,23 @@
 }
 
 /* Ajustes según el tamaño de pantalla */
-@media (max-width: 720px) {
+@media (max-width: 900px) {
     .banner-inicio {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .banner-inicio-texto, #carrusel {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #carrusel {
+        max-width: 620px;
+    }
+
+    .banner-inicio-texto h1 {
+        font-size: clamp (32px, 6vw, 52px);
+        overflow-wrap: break-word;
     }
 }
 

@@ -14,6 +14,7 @@ import { renderFooter } from './components/footer.js';
 import { renderSliderDestacados } from './components/SliderDestacados.js';
 import { renderSliderOfertas } from './components/SliderOfertas.js';
 import { renderInicioHero } from './components/hero-pre.js';
+import { renderPromoBanner } from './components/promo-banner.js';
 import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { renderNovedades } from './components/novedades.js';
@@ -51,6 +52,11 @@ initResenas();
 
 const prev = document.querySelector('#prev');
 prev.innerHTML = renderInicioHero();
+
+const promoBanner = document.querySelector('#promo-banner');
+if (promoBanner) {
+    promoBanner.innerHTML = renderPromoBanner();
+}
 
 
 initAnimaciones();

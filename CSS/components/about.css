@@ -390,14 +390,6 @@
     }
 }
 
-.compromiso-container{
-  width: 100%;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* [FIN] 4. LÍNEA DEL TIEMPO */
 
 
@@ -523,70 +515,6 @@
     }
 }
 
-.brands-container{
-  width: 100%;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.brands{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  background: var(--neutro-0);
-  border: 2px solid var(--neutro-200);
-  padding: 50px 30px;
-  border-radius: 20px;
-}
-
-.brand-text{
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.brand-text p{
-  font-weight: 700;
-}
-
-.brand-logos{
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: center;
-  justify-items: center;
-}
-
-.brand-item{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand-item img{
-  max-width: 100%;
-  max-height: 50px;
-  object-fit: contain;
-}
-
-@media (max-width: 1024px){
-  .brands{
-    flex-direction: column;
-  }
-
-  .brand-text{
-    justify-content: center;
-    text-align: center;
-  }
-
-  .brand-logos{
 /* [FIN] 5. EQUIPO */
 
 
@@ -609,10 +537,6 @@
     gap: 40px;
 }
 
-  .brand-item:last-child:nth-child(odd){
-    grid-column: 1 / -1;
-  }
-}
 .compromiso-card {
     padding: 40px 30px;
     background: var(--neutro-900);
@@ -951,5 +875,4 @@
     }
 }
 
-}
 /* [FIN] 8. BANNER FINAL */

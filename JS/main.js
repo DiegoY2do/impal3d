@@ -14,12 +14,14 @@ import { renderFooter } from './components/footer.js';
 import { renderSliderDestacados } from './components/SliderDestacados.js';
 import { renderSliderOfertas } from './components/SliderOfertas.js';
 import { renderInicioHero } from './components/hero-pre.js';
+import { renderPromoBanner } from './components/promo-banner.js';
 import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
+import { renderNovedades } from './components/novedades.js';
 import { initAnimaciones } from './animaciones.js';
 
 import { renderBenefits } from './components/benefits.js';
-    
+
 
 
 if (contactform) {
@@ -51,6 +53,11 @@ initResenas();
 const prev = document.querySelector('#prev');
 prev.innerHTML = renderInicioHero();
 
+const promoBanner = document.querySelector('#promo-banner');
+if (promoBanner) {
+    promoBanner.innerHTML = renderPromoBanner();
+}
+
 
 initAnimaciones();
 
@@ -59,6 +66,9 @@ benefits.innerHTML = renderBenefits();
 
 const carrusel = document.querySelector('#carrusel');
 carrusel.innerHTML = renderCarrusel();
+
+const novedades = document.querySelector('#novedades');
+novedades.innerHTML = renderNovedades();
 
 initAnimaciones();
 

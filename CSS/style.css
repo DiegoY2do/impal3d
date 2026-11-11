@@ -11,6 +11,7 @@
 @import url('./components/benefits.css');
 @import url('./components/novedades.css');
 @import url('./components/promo-banner.css');
+@import url('./components/colecciones.css');
 *{
     padding:0;
     margin:0;

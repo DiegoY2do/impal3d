@@ -19,9 +19,9 @@ import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { renderNovedades } from './components/novedades.js';
 import { initAnimaciones } from './animaciones.js';
+import { renderColecciones, initColecciones } from './components/colecciones.js';
 
 import { renderBenefits } from './components/benefits.js';
-
 
 
 if (contactform) {
@@ -72,3 +72,9 @@ novedades.innerHTML = renderNovedades();
 
 initAnimaciones();
 
+const colecciones = document.querySelector('#colecciones');
+
+if (colecciones) {
+    colecciones.innerHTML = renderColecciones();
+    initColecciones();
+}

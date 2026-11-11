@@ -1,0 +1,283 @@
+/* SECCIÓN 1: barra superior */
+.cuenta-header {
+    min-height:80px;
+    padding: 8px 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #dedee3;
+}
+
+.cuenta-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cuenta-logo img {
+    display: block;
+    width: 96px;
+    height: auto;
+}
+
+.cuenta-tienda {
+    color: #5f4bd6;
+    font: 700 14px "DM Sans", sans-serif;
+    text-decoration: none;
+}
+
+.cuenta-tienda:hover {
+    color: #382b87;
+}
+
+/*SECCIÓN 2: fondo general */
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #f8f8fa;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* SECCIÓN 3: título y texto introductorio */
+.cuenta-main{
+    padding: 54px 5.5%;
+}
+
+.cuenta-intro {
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.cuenta-intro h1 {
+    margin: 0 0 10px;
+    color: #17171d;
+    font-family: "Sora", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.cuenta-intro p {
+    margin: 0;
+    color: #5b5b66;
+    font-size: 17px;
+}
+
+/* SECCIÓN 4: adaptación del título */
+@media (max-width: 768px) {
+    .cuenta-main {
+        padding: 42px 5%;
+    }
+
+    .cuenta-intro {
+        margin-bottom: 30px;
+    }
+
+    .cuenta-intro h1 {
+        font-size: clamp(30px, 6vw, 38px);
+    }
+
+    .cuenta-intro p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .cuenta-main {
+        padding: 34px 20px;
+    }
+
+    .cuenta-intro h1 {
+        font-size: 30px;
+    }
+}
+
+/* SECCIÓN 5: tarjeta de formulario */
+.cuenta-paneles {
+    width: min(100%, 440px);
+    margin: 0 auto;
+}
+
+.cuenta-panel {
+    padding: 34px;
+    border: 1px solid #dedee3;
+    border-radius: 22px;
+    background: #fff;
+}
+
+.cuenta-panel[hidden] {
+    display: none;
+}
+
+.cuenta-panel h2 {
+    margin: 0 0 24px;
+    color: #17171d;
+    font-family: "Sora", sans-serif;
+    font-size: 24px;
+}
+
+@media (max-width: 480px) {
+    .cuenta-panel {
+        padding: 26px 22px;
+        border-radius: 18px;
+    }
+
+    .cuenta-panel h2 {
+        font-size: 21px;
+    }
+}
+
+/* SECCIÓN 6: campos de los formularios */
+.cuenta-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuenta-formulario > label:not(.cuenta-terminos):not(.cuenta-recordar) {
+    margin: 0 0 7px;
+    color: #17171d;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cuenta-formulario input:not([type="checkbox"]) {
+    width: 100%;
+    min-height: 50px;
+    margin: 0 0 18px;
+    padding: 0 15px;
+    border: 1px solid #c9c9d3;
+    border-radius: 11px;
+    background: #fff;
+    color: #17171d;
+    font: 15px "DM Sans", sans-serif;
+}
+
+.cuenta-formulario input:focus {
+    border-color: #5f4bd6;
+    outline: 3px solid rgb(95 75 214 / 14%);
+}
+
+.cuenta-formulario small {
+    margin: -10px 0 18px;
+    color: #6e6e7c;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* SECCIÓN 7: botones y enlaces */
+.cuenta-boton,
+.cuenta-boton-google {
+    width: 100%;
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font: 700 15px "DM Sans", sans-serif;
+    cursor: pointer;
+}
+
+.cuenta-boton {
+    border: 0;
+    background: #5f4bd6;
+    color: #fff;
+}
+
+.cuenta-boton:hover {
+    background: #4a38b0;
+}
+
+.cuenta-boton-google {
+    border: 1px solid #c9c9d3;
+    background: #fff;
+    color: #17171d;
+}
+
+.cuenta-cambio {
+    margin: 20px 0 0;
+    color: #5b5b66;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cuenta-cambio a,
+.cuenta-opciones a {
+    color: #5f4bd6;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cuenta-cambio a:hover,
+.cuenta-opciones a:hover {
+    text-decoration: underline;
+}
+
+.cuenta-opciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 0 20px;
+}
+
+.cuenta-recordar,
+.cuenta-terminos {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #5b5b66;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cuenta-recordar input,
+.cuenta-terminos input {
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+    accent-color: #5f4bd6;
+    flex: 0 0 auto;
+}
+
+.cuenta-terminos {
+    margin: 0 0 20px;
+}
+
+.cuenta-opciones a {
+    font-size: 13px;
+    text-align: right;
+}
+
+.cuenta-separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    color: #6e6e7c;
+    font-size: 13px;
+}
+
+.cuenta-separador::before,
+.cuenta-separador::after {
+    height: 1px;
+    flex: 1;
+    background: #dedee3;
+    content: "";
+}
+
+.cuenta-descripcion {
+    margin: -8px 0 22px;
+    color: #5b5b66;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+@media (max-width: 480px) {
+    .cuenta-opciones {
+        align-items: flex-start;
+    }
+
+    .cuenta-opciones a {
+        max-width: 150px;
+    }
+}

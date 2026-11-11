@@ -4,7 +4,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: 24px;
-    margin: 24px auto;
+    margin: 64px auto;
     padding: 24px;
     background: #0c0c0f;
     color: white;

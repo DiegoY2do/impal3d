@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/components/cuenta.css">
+    <title>Mi cuenta | IMP AL3D</title>
+</head>
+<body>
+    <header class="cuenta-header">
+        <a class="cuenta-logo" href="index.html" aria-label="Volver al inicio de IMP AL3D">
+            <img src="assets/img/brand/logo-imp-al3d-negro.svg" alt="IMP AL3D" width="96" height="64">
+        </a>
+        <a class="cuenta-tienda" href="index.html">← Volver a la tienda</a>
+    </header>
+
+    <main class="cuenta-main">
+        <section class="cuenta-intro">
+            <h1>Tu cuenta IMP AL3D</h1>
+            <p>Sigue tus pedidos, guarda favoritos y compra más 
+    rápido.</p>
+        </section>
+
+            <!--SECCIÓN Crear cuenta -->
+        <section class="cuenta-paneles">
+            <article class="cuenta-panel" id="vista-registro">
+                <h2>Crear cuenta</h2>
+            <form class="cuenta-formulario">
+                <label for="registro-nombre">Nombre completo</label>
+                <input id="registro-nombre" name="nombre" type="text"
+                placeholder="Tu nombre" autocomplete="name">
+
+                <label for="registro-correo">Correo electrónico</label>
+                <input id="registro-correo" name="correo" type="email"
+                placeholder="tu@correo.com" autocomplete="email">
+
+                <label for="registro-contraseña">Contraseña</label>
+                <input id="registro-contraseña" name="contraseña"
+                type="password" placeholder="Mínimo 8 caracteres" 
+                autocomplete="new-password">
+                <small>Usa al menos 8 caracteres, una mayúscula y un número.</small> 
+
+                <label class="cuenta-terminos">
+                    <input type="checkbox" name="terminos">
+                    <span>Acepto los términos, condiciones y el aviso de privacidad.</span>
+                </label>
+
+                <button type="button" class="cuenta-boton">Crear mi cuenta</button>
+                </form>
+
+                <p class="cuenta-cambio">¿Ya tienes cuenta? <a href="#vista-sesion">Inicia sesión</a></p>
+            </article>
+
+            <!--SECCIÓN Iniciar sesión -->
+            <article class="cuenta-panel" id="vista-sesion" hidden>
+                <h2>Iniciar sesión</h2>
+                <form class="cuenta-formulario">
+                    <label for="sesion-correo">Correo electrónico</label>
+                    <input id="sesion-correo" name="correo" type="email"
+                    placeholder="tu@correo.com" autocomplete="email">
+
+                    <label for="sesion-contraseña">Contraseña</label>
+                    <input id="sesion-contraseña" name="contraseña" type="password"
+                    placeholder="Tu contraseña" autocomplete="current-password">
+
+                    <div class="cuenta-opciones">
+                        <label class="cuenta-recordar">
+                            <input type="checkbox" name="recordarme">
+                            <span>Recordarme</span>
+                        </label>
+                        <a href="#vista-recuperar">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                    <button type="button" class="cuenta-boton">Entrar</button>
+                </form>
+
+                <div class="cuenta-separador"><span>o</span></div>
+                <button type="button" class="cuenta-boton-google">Continuar con Google</button>
+                
+                <p class="cuenta-cambio">¿Aún no tienes cuenta? <a href="#vista-registro">Regístrate</a></p>
+            </article>
+
+            <!--SECCIÓN Contraseña -->
+            <article class="cuenta-panel" id="vista-recuperar" hidden>
+                <h2>Recuperar contraseña</h2>
+                <p class="cuenta-descripcion">
+                Escribe tu correo y te enviaremos un enlace para crear una contraseña nueva.
+                </p>
+
+                <form class="cuenta-formulario">
+                    <label for="recuperar-correo">Correo electrónico</label>
+                    <input id="recuperar-correo" name="correo" type="email" placeholder="tu@correo.com" autocomplete="email">
+
+                    <button type="button" class="cuenta-boton">Enviar enlace</button>
+                </form>
+
+                <p class="cuenta-cambio">
+                    <a href="#vista-sesion">← Volver a iniciar sesión</a>
+                </p>
+            </article>
+        </section>
+    </main>
+    <script type="module" src="JS/cuenta.js"></script>
+</body>
+</html>

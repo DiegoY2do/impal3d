@@ -50,7 +50,7 @@ export function renderFooter() {
                     <div class="footer-column">
                         <h5>Ayuda</h5>
                         <ul>
-                            <li><a href="./index.html">Preguntas frecuentes</a></li>
+                            <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
                             <li><a href="./index.html">Envíos y devoluciones</a></li>
                             <li><a href="./index.html">Seguimiento de pedido</a></li>
                             <li><a href="./index.html">Términos y condiciones</a></li>

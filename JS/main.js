@@ -1,80 +1,51 @@
 import { renderNavbar } from './components/header.js';
-import { renderAboutHero } from './components/abouthero.js';
-import { renderStatics, initStatics } from './components/statistics.js';
-import { renderTimeline } from './components/timeline.js';
-import { renderTeam } from './components/team.js';
-import { renderCompromiso } from './components/compromiso.js';
-import { renderBrands } from './components/brands.js';
-import { renderContactForm } from './components/contactform.js';
-import { renderPreguntasRapidas} from "./components/preguntasrapidas.js";
-import { initContactForm } from './components/contact-validation.js';
-
-const contactform = document.querySelector('#contactform');
 import { renderFooter } from './components/footer.js';
+import { renderContactForm } from './components/contactform.js';
+import { initContactForm } from './components/contact-validation.js';
+import { renderPreguntasRapidas } from './components/preguntasrapidas.js';
 import { renderSliderDestacados } from './components/SliderDestacados.js';
 import { renderSliderOfertas } from './components/SliderOfertas.js';
+import { renderSliderVendidos } from './components/SliderVendidos.js';
 import { renderInicioHero } from './components/hero-pre.js';
 import { renderPromoBanner } from './components/promo-banner.js';
 import { renderCarrusel } from './components/carrusel.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { renderNovedades } from './components/novedades.js';
-import { initAnimaciones } from './animaciones.js';
 import { renderColecciones, initColecciones } from './components/colecciones.js';
-
+import { renderBrands } from './components/brands.js';
 import { renderBenefits } from './components/benefits.js';
+import { initAnimaciones } from './animaciones.js';
 
-
-if (contactform) {
-    contactform.innerHTML = renderContactForm();
-    initContactForm();
+// Helper: renderiza solo si el contenedor existe en la página
+function mount(selector, renderFn, init) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    el.innerHTML = renderFn();
+    if (init) init();
 }
 
-const preguntas = document.querySelector('#preguntas-rapidas');
-
-if (preguntas) {
-    preguntas.innerHTML = renderPreguntasRapidas();
+// Helper: ejecuta un slider solo si su contenedor existe
+function mountSlider(selector, renderFn, categoria) {
+    if (!document.querySelector(selector)) return;
+    renderFn(selector, categoria);
 }
 
+mount('#header', renderNavbar);
+mount('#footer', renderFooter);
+mount('#contactform', renderContactForm, initContactForm);
+mount('#preguntas-rapidas', renderPreguntasRapidas);
+mount('#prev', renderInicioHero);
+mount('#promo-banner', renderPromoBanner);
+mount('#brands', renderBrands);
+mount('#benefits', renderBenefits);
+mount('#carrusel', renderCarrusel);
+mount('#novedades', renderNovedades);
+mount('#resenas', renderResenas, initResenas);
+mount('#colecciones', renderColecciones, initColecciones);
 
-const header = document.querySelector('#header');
-header.innerHTML = renderNavbar();
+mountSlider('#slider-destacados', renderSliderDestacados, 'destacados');
+mountSlider('#slider-ofertas', renderSliderOfertas, 'ofertas');
+mountSlider('#slider-vendidos', renderSliderVendidos, 'vendidos');
 
-renderSliderDestacados('#slider-destacados', 'destacados');
-renderSliderOfertas('#slider-ofertas', 'ofertas');
-
-const footer = document.querySelector('#footer');
-footer.innerHTML = renderFooter();
-
-
-const resenas = document.querySelector('#resenas');
-resenas.innerHTML = renderResenas();
-initResenas();
-
-const prev = document.querySelector('#prev');
-prev.innerHTML = renderInicioHero();
-
-const promoBanner = document.querySelector('#promo-banner');
-if (promoBanner) {
-    promoBanner.innerHTML = renderPromoBanner();
-}
-
-
+// Al final, cuando todo el HTML ya existe
 initAnimaciones();
-
-const benefits = document.querySelector('#benefits');
-benefits.innerHTML = renderBenefits();
-
-const carrusel = document.querySelector('#carrusel');
-carrusel.innerHTML = renderCarrusel();
-
-const novedades = document.querySelector('#novedades');
-novedades.innerHTML = renderNovedades();
-
-initAnimaciones();
-
-const colecciones = document.querySelector('#colecciones');
-
-if (colecciones) {
-    colecciones.innerHTML = renderColecciones();
-    initColecciones();
-}

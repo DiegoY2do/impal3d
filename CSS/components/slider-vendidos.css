@@ -1,0 +1,224 @@
+/* ==========================================================
+   SLIDER LO MÁS VENDIDO
+   --visibles   = cuántas cards se ven a la vez
+   --separacion = espacio entre cards
+   En los media queries solo se cambian estas dos variables.
+   ========================================================== */
+
+.slider-vendidos {
+    --visibles: 4;
+    --separacion: 16px;
+
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================
+   ENCABEZADO (fuera del panel gris): título a la izquierda,
+   pestañas + flechas a la derecha
+   ========================================================== */
+
+.vendidos-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.vendidos-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.vendidos-text p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    color: var(--neutro-600);
+}
+
+.vendidos-controles {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+/* ---------- Pestañas ---------- */
+
+/* Si hay muchas categorías, las pestañas pasan a otra línea */
+.vendidos-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.vendidos-tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border: 1px solid var(--neutro-200);
+    border-radius: 999px;
+    background: var(--neutro-0);
+    color: var(--neutro-950);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.vendidos-tab:hover {
+    border-color: var(--morado-600);
+    color: var(--morado-600);
+}
+
+/* Pestaña activa: negra (va después de :hover para que gane) */
+.vendidos-tab.activa {
+    background: var(--neutro-950);
+    border-color: var(--neutro-950);
+    color: var(--neutro-0);
+}
+
+.vendidos-tab:focus-visible {
+    outline: 2px solid var(--morado-600);
+    outline-offset: 2px;
+}
+
+/* ---------- Flechas (por fuera del panel gris) ---------- */
+
+.vendidos-flechas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Flechas redondas (estilo "Contorno" del sistema de diseño) */
+.vendidos-flecha {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutro-200);
+    border-radius: 50%;
+    background: var(--neutro-0);
+    color: var(--neutro-950);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.vendidos-flecha:hover {
+    color: var(--morado-600);
+    border-color: var(--morado-600);
+}
+
+.vendidos-flecha svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Sin más cards hacia ese lado (JS pone "disabled") */
+.vendidos-flecha:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   PANEL GRIS + CARRUSEL (lo único que se desplaza)
+   ========================================================== */
+
+.container-vendidos {
+    width: 100%;
+}
+
+/* Fila de cards con scroll horizontal y sin barra visible.
+   El padding con margen negativo deja espacio para que la sombra
+   de las cards no se corte (el overflow la recortaría). */
+.vendidos-track {
+    display: flex;
+    gap: var(--separacion);
+    padding: 8px 0 32px;
+    margin: -8px 0 -32px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.vendidos-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ancho de cada card: las visibles llenan exactamente el carrusel.
+   (el % se calcula sobre el ancho de .vendidos-track) */
+.vendidos-track .card {
+    flex: 0 0 calc((100% - (var(--visibles) - 1) * var(--separacion)) / var(--visibles));
+    scroll-snap-align: start;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1280px) {
+    .slider-vendidos {
+        --visibles: 3;
+    }
+}
+
+/* Tablet: el título queda arriba y las pestañas + flechas abajo.
+   Las pestañas se desplazan de lado si no caben. */
+@media (max-width: 1024px) {
+    .slider-vendidos {
+        padding: 60px 0;
+    }
+
+    .vendidos-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .vendidos-controles {
+        justify-content: space-between;
+    }
+
+    .vendidos-tabs {
+        flex: 1;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .vendidos-tabs::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-vendidos {
+        --visibles: 2;
+        --separacion: 12px;
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 567px) {
+    .slider-vendidos {
+        --visibles: 1;
+    }
+}

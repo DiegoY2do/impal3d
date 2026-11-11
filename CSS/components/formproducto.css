@@ -1,0 +1,327 @@
+/* ==========================================================================
+   [INICIO] FORMULARIO DE PRODUCTOS — #formproducto
+   Variables locales (--fp-*): cámbialas por las del style.css si ya existen.
+   ========================================================================== */
+
+.form-producto {
+    --fp-acento: #6c3bd9;
+    --fp-acento-suave: #efe9fc;
+    --fp-borde: #e4e4ec;
+    --fp-fondo: #f6f6fa;
+    --fp-texto: var(--neutro-900, #14141f);
+    --fp-ok: #168a4a;
+    --fp-error: #d33a3a;
+    --fp-aviso: #b26a00;
+
+    width: 100%;
+    padding: 60px 0 100px;
+    color: var(--fp-texto);
+}
+
+.form-producto *,
+.form-producto *::before,
+.form-producto *::after {
+    box-sizing: border-box;
+}
+
+.fp-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.fp-head p {
+    margin: 0;
+    opacity: .75;
+}
+
+.fp-head code,
+.fp-hint code {
+    background: var(--fp-fondo);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-size: .9em;
+}
+
+/* ---------- Layout ---------- */
+.fp-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.fp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fp-preview {
+    position: static;
+}
+
+/* ---------- Tarjetas ---------- */
+.fp-card {
+    margin: 0;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--fp-borde);
+    border-radius: 20px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.fp-titulo {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* ---------- Campos ---------- */
+.fp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.fp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.fp-label {
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.fp-input {
+    width: 100%;
+    padding: 11px 14px;
+    font: inherit;
+    font-size: .95rem;
+    color: var(--fp-texto);
+    background: #fff;
+    border: 1px solid var(--fp-borde);
+    border-radius: 12px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.fp-input::placeholder {
+    color: #9a9aab;
+}
+
+.fp-input:focus {
+    outline: none;
+    border-color: var(--fp-acento);
+    box-shadow: 0 0 0 3px var(--fp-acento-suave);
+}
+
+.fp-input[readonly] {
+    background: var(--fp-fondo);
+    color: #6b6b7b;
+    cursor: not-allowed;
+}
+
+textarea.fp-input {
+    resize: vertical;
+    min-height: 84px;
+}
+
+.fp-error {
+    min-height: 0;
+    color: var(--fp-error);
+    font-size: .8rem;
+}
+
+.fp-hint {
+    color: #6b6b7b;
+    font-size: .8rem;
+}
+
+/* ---------- Chips (checkboxes) ---------- */
+.fp-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fp-chip {
+    position: relative;
+    cursor: pointer;
+}
+
+.fp-chip input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    cursor: pointer;
+}
+
+.fp-chip span {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: .9rem;
+    font-weight: 500;
+    border: 1px solid var(--fp-borde);
+    border-radius: 999px;
+    background: #fff;
+    transition: background .2s, border-color .2s, color .2s;
+}
+
+.fp-chip input:checked + span {
+    background: var(--fp-acento-suave);
+    border-color: var(--fp-acento);
+    color: var(--fp-acento);
+}
+
+.fp-chip input:focus-visible + span {
+    box-shadow: 0 0 0 3px var(--fp-acento-suave);
+    border-color: var(--fp-acento);
+}
+
+/* ---------- Imágenes ---------- */
+.fp-subir {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.fp-archivo {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.fp-url {
+    display: flex;
+    flex: 1 1 260px;
+    gap: 8px;
+}
+
+.fp-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fp-thumb {
+    position: relative;
+    margin: 0;
+    width: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fp-thumb img {
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    background: var(--fp-fondo);
+    border: 1px solid var(--fp-borde);
+    border-radius: 14px;
+}
+
+.fp-thumb figcaption {
+    font-size: .72rem;
+    color: #6b6b7b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fp-quitar {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    font-size: .7rem;
+    line-height: 1;
+    color: #fff;
+    background: rgba(20, 20, 31, .75);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fp-quitar:hover {
+    background: var(--fp-error);
+}
+
+/* ---------- Acciones y estado ---------- */
+.fp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fp-estado {
+    margin: 0;
+    min-height: 1.4em;
+    font-size: .9rem;
+}
+
+.fp-estado[data-tipo="ok"] { color: var(--fp-ok); }
+.fp-estado[data-tipo="error"] { color: var(--fp-error); }
+.fp-estado[data-tipo="aviso"] { color: var(--fp-aviso); }
+
+.fp-guardar:disabled {
+    opacity: .6;
+    cursor: progress;
+}
+
+/* ---------- Vista previa del JSON ---------- */
+.fp-json {
+    margin: 0;
+    padding: 16px;
+    max-height: 560px;
+    overflow: auto;
+    font-size: .8rem;
+    line-height: 1.55;
+    color: #e8e8ef;
+    background: var(--neutro-900, #0f0f14);
+    border-radius: 14px;
+    white-space: pre;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+    .fp-grid {
+        grid-template-columns: 110px 1fr;
+    }
+    .fp-grid.fp-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fp-full {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-producto {
+        padding: 80px 0 120px;
+    }
+    .fp-layout {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    }
+    .fp-preview {
+        position: sticky;
+        top: 24px;
+    }
+    .fp-grid.fp-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* [FIN] FORMULARIO DE PRODUCTOS */

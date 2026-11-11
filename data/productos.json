@@ -5,7 +5,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 5000,
@@ -24,7 +25,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -44,7 +46,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -63,7 +66,8 @@
         "nombre": "Tiffany",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -81,7 +85,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -99,7 +104,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -116,7 +122,8 @@
         "nombre": "Michael Myers",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -133,7 +140,8 @@
         "nombre": "Dr. Peste",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -150,7 +158,8 @@
         "nombre": "Freddy Krueger",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -167,7 +176,8 @@
         "nombre": "Merlina",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -184,7 +194,8 @@
         "nombre": "Uchiha Sasuke",
         "colecciones": [
             "Anime",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Anime",
         "precio": 500,

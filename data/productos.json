@@ -5,14 +5,14 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
-        "precio": 50,
+        "precio": 5000,
         "rating": 4.9,
         "resenas": 212,
-        "agotado": true,
-        "desc": 20,
+        "desc": 50,
         "descripcion": "Calavera decorativa con patrón Voronoi calado, impresa capa por capa en PLA+ seda dorado. Ligera, resistente y con juegos de luz y sombra que solo la impresión 3D hace posibles.",
         "tamaño": "5",
         "imagenes": [
@@ -25,7 +25,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -45,7 +46,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -65,13 +67,12 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
         "rating": 5.0,
         "resenas": 143,
-        "agotado": true,
         "descripcion": "La novia ideal para el Chucky que llevas dentro",
         "tamaño": "5",
         "imagenes": [
@@ -84,7 +85,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -102,7 +104,8 @@
         "colecciones": [
             "Terror",
             "destacados",
-            "ofertas"
+            "ofertas",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -119,7 +122,8 @@
         "nombre": "Michael Myers",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -136,7 +140,8 @@
         "nombre": "Dr. Peste",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -153,7 +158,8 @@
         "nombre": "Freddy Krueger",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -170,7 +176,8 @@
         "nombre": "Merlina",
         "colecciones": [
             "Terror",
-            "destacados"
+            "destacados",
+            "vendidos"
         ],
         "categoria": "Terror",
         "precio": 50,
@@ -181,5 +188,26 @@
         "imagenes": [
             "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg"
         ]
+    },
+    {
+        "id": 11,
+        "nombre": "Uchiha Sasuke",
+        "colecciones": [
+            "Anime",
+            "destacados",
+            "vendidos"
+        ],
+        "categoria": "Anime",
+        "precio": 500,
+        "rating": 0.0,
+        "resenas": 0,
+        "nuevo": true,
+        "descripcion": "Each part of the model is separated by color, allowing you to easily print them without the need for AMS. The pieces are designed with precise tolerances, making them simple to assemble and ensuring a smooth, hassle-free building process.\n\nThe package includes STL and 3MF files that I have arranged and optimized by color to make printing easier and require as little support as possible.",
+        "tamaño": "31",
+        "imagenes": [
+            "./assets/img/productos/Mo-hinh-chien-binh-toc-den-cam-k.webp",
+            "./assets/img/productos/IMG_1433.webp",
+            "./assets/img/productos/IMG_1414.webp"
+        ]
     }
-]   
+]

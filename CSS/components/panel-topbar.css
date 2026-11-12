@@ -1,0 +1,101 @@
+/* ==========================================================================
+   [INICIO] BARRA SUPERIOR — #panel-topbar
+   Se queda arriba al hacer scroll para tener "Guardar" siempre a la mano.
+   ========================================================================== */
+
+.panel-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 32px 18px;
+    background: rgba(247, 247, 251, .92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.pn-volver {
+    flex: none;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    color: var(--pn-texto) !important;
+    background: var(--pn-superficie);
+    border: 1px solid var(--pn-borde);
+    border-radius: 50%;
+    transition: border-color .15s;
+}
+
+.pn-volver:hover {
+    border-color: var(--pn-borde-input);
+}
+
+.pn-topbar__titulo {
+    flex: 1;
+    min-width: 0;
+}
+
+.pn-topbar__titulo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pn-topbar__titulo p {
+    margin-top: 4px;
+    font-size: 13.5px;
+    color: var(--pn-tenue);
+}
+
+.pn-topbar__acciones {
+    flex: none;
+    display: flex;
+    gap: 12px;
+}
+
+.panel-burger {
+    display: none;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    padding: 0;
+    color: var(--pn-texto);
+    background: var(--pn-superficie);
+    border: 1px solid var(--pn-borde);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .panel-topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .panel-burger {
+        display: grid;
+    }
+
+    .pn-topbar__titulo h1 {
+        font-size: 21px;
+    }
+
+    .pn-topbar__acciones {
+        width: 100%;
+    }
+
+    .pn-topbar__acciones .pn-btn {
+        flex: 1;
+    }
+}
+
+/* [FIN] BARRA SUPERIOR */

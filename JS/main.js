@@ -15,6 +15,7 @@ import { renderColecciones, initColecciones } from './components/colecciones.js'
 import { renderBrands } from './components/brands.js';
 import { renderBenefits } from './components/benefits.js';
 import { initAnimaciones } from './animaciones.js';
+import { renderCompraxcategoria, initCompraxcategoria } from './components/compraxcategoria.js';
 
 // Helper: renderiza solo si el contenedor existe en la página
 function mount(selector, renderFn, init) {
@@ -46,6 +47,13 @@ mount('#colecciones', renderColecciones, initColecciones);
 mountSlider('#slider-destacados', renderSliderDestacados, 'destacados');
 mountSlider('#slider-ofertas', renderSliderOfertas, 'ofertas');
 mountSlider('#slider-vendidos', renderSliderVendidos, 'vendidos');
+
+const compraxcategoria = document.querySelector('#compraxcategoria');
+
+if (compraxcategoria) {
+    compraxcategoria.innerHTML = renderCompraxcategoria();
+    initCompraxcategoria();
+}
 
 // Al final, cuando todo el HTML ya existe
 initAnimaciones();

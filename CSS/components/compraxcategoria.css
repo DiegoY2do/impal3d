@@ -1,0 +1,154 @@
+.categorias-container {
+    background-color: #f8f8fa;
+    padding: 60px 0;
+}
+
+.categorias-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.categorias-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.categorias-text p {
+    font-size: 18px;
+    color: #55545c;
+}
+
+.categoria-card h3 {
+    color: #16151a;
+}
+
+
+/* Flechas */
+.categorias-buttons {
+    display: flex;
+    gap: 10px;
+}
+ 
+.categorias-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--neutro-200);
+    border-radius: 50%;
+    background: var(--neutro-0);
+    color: var(--neutro-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+ 
+.categorias-btn:hover {
+    color: var(--morado-600);
+    border-color: var(--morado-600);
+}
+
+
+
+/* Tarjetas */
+.categorias-cards {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.categorias-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.categoria-card {
+    flex: 1 0 220px;
+    background-color: #f1f1f3;
+    border-radius: 28px;
+    padding: 24px;
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.categoria-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.categoria-card p {
+    color: #55545c;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .categorias-container {
+        padding: 40px 0;
+    }
+
+    .categorias-title {
+        font-size: 38px;
+    }
+
+    .categoria-card {
+        flex: 0 0 calc((100% - 48px) / 3);
+    }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .categorias-container {
+        padding: 30px 0;
+    }
+
+    .categorias-title {
+        font-size: 30px;
+    }
+
+    .categorias-text p {
+        font-size: 16px;
+    }
+
+    .categorias-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .categorias-cards {
+        gap: 16px;
+        scroll-snap-type: x mandatory; /* NUEVO: se detiene en cada tarjeta */
+    }
+
+    /* NUEVO: espacios a los lados para que la primera y la última también queden al centro */
+    .categorias-cards::before,
+    .categorias-cards::after {
+        content: "";
+        flex: 0 0 calc(15% - 16px);
+    }
+
+    .categoria-card {
+        flex: 0 0 70%;
+        padding: 16px;
+        scroll-snap-align: center; /* NUEVO: la tarjeta queda centrada */
+    }
+
+    .categoria-card img {
+        height: 150px;
+    }
+
+    .categorias-btn {
+        width: 44px;
+        height: 44px;
+    }
+}

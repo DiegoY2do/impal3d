@@ -10,6 +10,10 @@
 @import url('./components/resenas.css');
 @import url('./components/benefits.css');
 @import url('./components/novedades.css');
+@import url('./components/promo-banner.css');
+@import url('./components/colecciones.css');
+@import url("components/formproducto.css");
+@import url('./components/slider-vendidos.css');
 
 *{
     padding:0;

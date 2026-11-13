@@ -16,7 +16,7 @@
 .promo-etiqueta {
     display: inline-block;
     background: var(--turquesa-300);
-    color: var(--turquesa-900);
+    color: var(--neutro-959);
     font-family: var(--font-body);
     font-size: clamp(13px, 1.1vw, 15px);
     font-weight: 700;
@@ -54,18 +54,15 @@
 }
 
 .promo-fotos {
-    position: relative;
-    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .promo-fotos img {
-    position: absolute;
-    width: 46%;
-    height: 80%;
-    object-fit: cover;
-    border: 6px solid var(--neutro-0);
-    border-radius: 18px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 520px;
+    height: auto;
 }
 
 .promo-fotos img:nth-child(1) { left: 0;   top: 12%; transform: rotate(-4deg); z-index: 1; }

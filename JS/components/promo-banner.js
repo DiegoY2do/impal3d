@@ -16,9 +16,7 @@ export function renderPromoBanner() {
                     </div>
 
                     <div class="promo-fotos">
-                        <img src="assets/img/productos/coraline.webp" alt="Figura de Coraline impresa en 3D" loading="lazy">
-                        <img src="assets/img/productos/Ghostface.webp" alt="Figura de Ghostface impresa en 3D" loading="lazy">
-                        <img src="assets/img/productos/Pennywise.webp" alt="Figura de Pennywise impresa en 3D" loading="lazy">
+                         <img src="assets/img/banners/mosaico-violeta-100-d.png" alt="Figuras impresas en 3D: conejo, bebé azul y camión" loading="lazy">
                     </div>
                 </div>
             </div>

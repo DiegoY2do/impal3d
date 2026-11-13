@@ -8,7 +8,7 @@ import { renderSliderOfertas } from './components/SliderOfertas.js';
 import { renderSliderVendidos } from './components/SliderVendidos.js';
 import { renderInicioHero } from './components/hero-pre.js';
 import { renderPromoBanner } from './components/promo-banner.js';
-import { renderCarrusel } from './components/carrusel.js';
+import { renderBannerInicio } from './components/banner-inicio.js';
 import { renderResenas, initResenas } from './components/resenas.js';
 import { renderNovedades } from './components/novedades.js';
 import { renderColecciones, initColecciones } from './components/colecciones.js';
@@ -16,6 +16,7 @@ import { renderBrands } from './components/brands.js';
 import { renderBenefits } from './components/benefits.js';
 import { initAnimaciones } from './animaciones.js';
 import { renderCompraxcategoria, initCompraxcategoria } from './components/compraxcategoria.js';
+import { renderCuenta } from './components/panelusuario.js';
 
 // Helper: renderiza solo si el contenedor existe en la página
 function mount(selector, renderFn, init) {
@@ -37,9 +38,10 @@ mount('#contactform', renderContactForm, initContactForm);
 mount('#preguntas-rapidas', renderPreguntasRapidas);
 mount('#prev', renderInicioHero);
 mount('#promo-banner', renderPromoBanner);
+mount('#cuenta', renderCuenta);
 mount('#brands', renderBrands);
 mount('#benefits', renderBenefits);
-mount('#carrusel', renderCarrusel);
+mount('#banner-inicio', renderBannerInicio);
 mount('#novedades', renderNovedades);
 mount('#resenas', renderResenas, initResenas);
 mount('#colecciones', renderColecciones, initColecciones);

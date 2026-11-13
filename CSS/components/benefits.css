@@ -4,6 +4,8 @@
 .benefits-container {
     width: 100%;
     padding: 24px 0;
+    max-width: none;
+    margin: 0 auto;
 }
 
 /* GRID DE TARJETAS */
@@ -17,13 +19,12 @@
 /* TARJETAS */
 
 .benefits-card {
+    width: 100%;
+    min-height: 64px;
+    padding: 16px 18px;
     display: flex;
     align-items: center;
     gap: 12px;
-
-    min-width: 0;
-    padding: 14px;
-
     background-color:var(--neutro-50);
     border: 1px solid var(--neutro-300);
     border-radius: 12px;
@@ -103,5 +104,77 @@
 
     .benefits-card {
         padding: 12px;
+    }
+}
+
+
+/* Carrusel*/
+
+#benefitsCarousel {
+    width: 100%;
+    padding: 5px 0 20px;
+}
+
+#benefitsCarousel .carousel-item {
+    padding: 5px 40px;
+}
+
+#benefitsCarousel .benefits-card {
+    width: 100%;
+    min-height: 82px;
+}
+
+/* CONTROLES DEL CARRUSEL */
+
+#benefitsCarousel .carousel-control-prev,
+#benefitsCarousel .carousel-control-next {
+    width: 35px;
+    opacity: 1;
+}
+
+#benefitsCarousel .carousel-control-prev-icon,
+#benefitsCarousel .carousel-control-next-icon {
+    background-color: var(--morado-600);
+    border-radius: 50%;
+    background-size: 55%;
+}
+
+
+@media (max-width: 360px) {
+
+    #benefitsCarousel .carousel-item {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+}
+
+
+
+/* ESCRITORIO */
+.benefits-desktop {
+    display: grid !important;
+}
+
+.benefits-mobile {
+    display: none !important;
+}
+
+/* TABLET */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .benefits-desktop {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULAR */
+@media (max-width: 575.98px) {
+
+    .benefits-desktop {
+        display: none !important;
+    }
+
+    .benefits-mobile {
+        display: block !important;
     }
 }

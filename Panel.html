@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMP AL3D | Panel de administración</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#15131f">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap">
+
+    <!-- El panel tiene su propio CSS (importa los componentes del panel) -->
+    <link rel="stylesheet" href="CSS/panel.css">
+</head>
+
+<body class="panel">
+
+    <aside id="panel-sidebar" class="panel-sidebar" aria-label="Menú del panel"></aside>
+
+    <div class="panel-main">
+        <header id="panel-topbar" class="panel-topbar"></header>
+        <main id="panel-contenido" class="panel-contenido"></main>
+    </div>
+
+    <div class="panel-backdrop"></div>
+    <div id="panel-toasts" aria-live="polite"></div>
+
+    <script type="module" src="./JS/panel.js"></script>
+</body>
+</html>

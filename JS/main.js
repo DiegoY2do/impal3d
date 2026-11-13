@@ -16,6 +16,7 @@ import { renderBrands } from './components/brands.js';
 import { renderBenefits } from './components/benefits.js';
 import { initAnimaciones } from './animaciones.js';
 import { renderCompraxcategoria, initCompraxcategoria } from './components/compraxcategoria.js';
+import { renderCuenta } from './components/panelusuario.js';
 
 // Helper: renderiza solo si el contenedor existe en la página
 function mount(selector, renderFn, init) {
@@ -37,6 +38,7 @@ mount('#contactform', renderContactForm, initContactForm);
 mount('#preguntas-rapidas', renderPreguntasRapidas);
 mount('#prev', renderInicioHero);
 mount('#promo-banner', renderPromoBanner);
+mount('#cuenta', renderCuenta);
 mount('#brands', renderBrands);
 mount('#benefits', renderBenefits);
 mount('#carrusel', renderCarrusel);

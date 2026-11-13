@@ -1,0 +1,265 @@
+.cuenta {
+    padding: 24px 0 80px;
+}
+
+.cuenta p {
+    font-size: 15px;
+}
+
+/* Breadcrumb */
+.cuenta-migas {
+    display: flex;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--neutro-500);
+    margin-bottom: 24px;
+}
+.cuenta-migas a { color: var(--neutro-500); }
+.cuenta-migas a:hover { color: var(--morado-600); }
+.cuenta-migas-actual { color: var(--neutro-900); }
+
+/* Layout */
+.cuenta-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Menú lateral */
+.cuenta-menu {
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 28px;
+    padding: 24px;
+}
+.cuenta-perfil {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--neutro-200);
+}
+.cuenta-perfil strong {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    color: var(--neutro-950);
+}
+.cuenta-perfil p {
+    font-size: 13px;
+    color: var(--neutro-500);
+}
+.cuenta-avatar {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--morado-600);
+    color: var(--neutro-0);
+    display: grid;
+    place-items: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+}
+.cuenta-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.cuenta-enlaces a {
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--neutro-800);
+    transition: background 0.2s ease;
+}
+.cuenta-enlaces a:hover { background: var(--morado-50); }
+.cuenta-enlaces a.activo {
+    background: var(--morado-100);
+    color: var(--morado-700);
+    font-weight: 700;
+}
+
+/* Saludo y estadísticas */
+.cuenta-saludo h1 { margin-bottom: 8px; }
+.cuenta-saludo p {
+    font-size: 17px;
+    color: var(--neutro-600);
+    margin-bottom: 28px;
+}
+.cuenta-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.cuenta-stat {
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 22px;
+    padding: 24px;
+}
+.cuenta-stat p {
+    color: var(--neutro-600);
+    margin-bottom: 8px;
+}
+.cuenta-stat strong {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1;
+    color: var(--morado-600);
+}
+
+/* Bloques */
+.cuenta-bloque { margin-bottom: 44px; }
+.cuenta-bloque-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+}
+.cuenta-bloque-cabecera h2 {
+    font-size: clamp(22px, 2vw, 28px);
+}
+.cuenta-bloque-cabecera a {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--morado-600);
+}
+
+/* Tabla de pedidos */
+.cuenta-tabla-caja {
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 22px;
+    overflow-x: auto;
+}
+.cuenta-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: 15px;
+}
+.cuenta-tabla th,
+.cuenta-tabla td {
+    padding: 18px 24px;
+    text-align: left;
+    white-space: nowrap;
+}
+.cuenta-tabla th {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--neutro-500);
+    background: var(--neutro-50);
+}
+.cuenta-tabla td { border-top: 1px solid var(--neutro-100); color: var(--neutro-700); }
+.cuenta-pedido-id,
+.cuenta-pedido-total { font-weight: 700; color: var(--neutro-950); }
+.cuenta-tabla .cuenta-tabla-accion { text-align: right; }
+.cuenta-tabla-accion a { color: var(--morado-600); font-weight: 700; }
+
+.cuenta-estado {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.cuenta-estado-produccion { background: #FEF3DC; color: #8A5A00; }
+.cuenta-estado-camino     { background: #E3F0FD; color: #1D5FA8; }
+.cuenta-estado-entregado  { background: #DDF5EA; color: #14704A; }
+.cuenta-estado-cancelado  { background: #FDE6E7; color: #B3262B; }
+
+/* Direcciones */
+.cuenta-direcciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.cuenta-direccion {
+    background: var(--neutro-0);
+    border: 1px solid var(--neutro-200);
+    border-radius: 22px;
+    padding: 22px;
+}
+.cuenta-direccion-principal {
+    border: 2px solid var(--morado-600);
+}
+.cuenta-direccion-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.cuenta-direccion-titulo strong {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    color: var(--neutro-950);
+}
+.cuenta-etiqueta {
+    background: var(--morado-100);
+    color: var(--morado-700);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+.cuenta-direccion p {
+    color: var(--neutro-600);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.cuenta-direccion-acciones {
+    display: flex;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.cuenta-direccion-acciones a { color: var(--morado-600); }
+.cuenta-direccion-acciones a.eliminar { color: var(--error); }
+
+.cuenta-direccion-nueva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 160px;
+    border: 2px dashed var(--neutro-300);
+    border-radius: 22px;
+    color: var(--neutro-700);
+    transition: border-color 0.2s ease;
+}
+.cuenta-direccion-nueva:hover { border-color: var(--morado-600); }
+.cuenta-mas {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--morado-100);
+    color: var(--morado-600);
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+/* Favoritos */
+.cuenta-favoritos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cuenta-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .cuenta-stats,
+    .cuenta-direcciones,
+    .cuenta-favoritos { grid-template-columns: 1fr; }
+}

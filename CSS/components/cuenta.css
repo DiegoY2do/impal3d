@@ -150,6 +150,7 @@ body {
     background: #fff;
     color: #17171d;
     font: 15px "DM Sans", sans-serif;
+    box-sizing: border-box;
 }
 
 .cuenta-formulario input:focus {
@@ -280,4 +281,26 @@ body {
     .cuenta-opciones a {
         max-width: 150px;
     }
+}
+
+/* SECCIÓN 8: mensajes del registro */
+.cuenta-alerta:not([hidden]) {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.cuenta-alerta--error {
+    border-color: #e5a7aa;
+    background: #fff0f0;
+    color: #8d242a;
+}
+
+.cuenta-alerta--exito {
+    border-color: #a8d9c1;
+    background: #eaf8f0;
+    color: #1d6843;
 }

@@ -9,7 +9,7 @@ import { renderSliderVendidos } from './components/SliderVendidos.js';
 import { renderInicioHero } from './components/hero-pre.js';
 import { renderPromoBanner } from './components/promo-banner.js';
 import { renderCarrusel } from './components/carrusel.js';
-import { renderResenas, initResenas } from './components/resenas.js';
+import { renderResenas } from './components/resenas.js';
 import { renderNovedades } from './components/novedades.js';
 import { renderColecciones, initColecciones } from './components/colecciones.js';
 import { renderBrands } from './components/brands.js';
@@ -40,7 +40,7 @@ mount('#brands', renderBrands);
 mount('#benefits', renderBenefits);
 mount('#carrusel', renderCarrusel);
 mount('#novedades', renderNovedades);
-mount('#resenas', renderResenas, initResenas);
+mount('#resenas', renderResenas);
 mount('#colecciones', renderColecciones, initColecciones);
 
 mountSlider('#slider-destacados', renderSliderDestacados, 'destacados');

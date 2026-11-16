@@ -29,22 +29,16 @@ export function renderResenas() {
                         </p>
                     </div>
 
-                     <div class="resenas-indicadores" aria-label="Seleccionar reseña">
-                        ${resenas.map((_, index) => `
-                            <button
-                                class="indicador ${index === 0 ? 'activo' : ''}"
-                                data-index="${index}"
-                                aria-label="Ver reseña ${index + 1}"
-                                aria-pressed="${index === 0}"
-                                type="button">
-                            </button>
-                        `).join('')}
+                    <div class="resenas-indicadores" aria-label="Páginas de reseñas">
+                        <span class="indicador activo"></span>
+                        <span class="indicador"></span>
+                        <span class="indicador"></span>
                     </div>
                 </div>
 
                 <div class="resenas-grid">
-                    ${resenas.map((resena, index) => `
-                        <article class="resena-card ${index === 0 ? 'activa' : ''}">
+                    ${resenas.map(resena => `
+                        <article class="resena-card">
                             <div class="resena-estrellas" aria-label="5 estrellas">
                                 ★★★★★
                             </div>
@@ -69,26 +63,4 @@ export function renderResenas() {
             </div>
         </section>
     `;
-}
-
-export function initResenas() {
-    const indicadores = document.querySelectorAll('.indicador');
-    const tarjetas = document.querySelectorAll('.resena-card');
-
-    indicadores.forEach(indicador => {
-        indicador.addEventListener('click', () => {
-            const index = Number(indicador.dataset.index);
-
-            tarjetas.forEach((tarjeta, tarjetaIndex) => {
-                tarjeta.classList.toggle('activa', tarjetaIndex === index);
-            });
-
-            indicadores.forEach((elemento, indicadorIndex) => {
-                const activo = indicadorIndex === index;
-
-                elemento.classList.toggle('activo', activo);
-                elemento.setAttribute('aria-pressed', activo);
-            });
-        });
-    });
 }

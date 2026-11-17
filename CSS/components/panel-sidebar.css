@@ -1,0 +1,183 @@
+/* ==========================================================================
+   [INICIO] BARRA LATERAL — #panel-sidebar
+   Fija a la altura de la ventana; solo el contenido de la derecha hace scroll.
+   ========================================================================== */
+
+.panel-sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 16px;
+    background: var(--pn-sidebar);
+    color: var(--pn-sidebar-texto);
+}
+
+.pn-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 8px 18px;
+    border-bottom: 1px solid var(--pn-sidebar-linea);
+}
+
+.pn-marca img {
+    height: 44px;
+    width: auto;
+}
+
+.pn-badge-admin {
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #dcd7ff;
+    background: #3a2fa0;
+    border-radius: 999px;
+}
+
+/* El menú hace scroll por dentro si no cabe; el pie siempre queda visible */
+.pn-nav {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pn-sidebar-2) transparent;
+}
+
+.pn-nav__grupo {
+    margin: 16px 12px 6px !important;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--pn-sidebar-tenue);
+}
+
+.pn-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border-radius: 12px;
+    color: var(--pn-sidebar-texto) !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .15s;
+}
+
+.pn-nav__link .pn-icono {
+    flex: none;
+    opacity: .85;
+}
+
+.pn-nav__link:hover {
+    background: rgba(255, 255, 255, .06);
+}
+
+.pn-nav__link:focus-visible {
+    outline: 2px solid var(--pn-violeta-100);
+    outline-offset: 2px;
+}
+
+.pn-nav__link.is-activo {
+    background: var(--pn-acento);
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.pn-nav__link.is-activo .pn-icono {
+    opacity: 1;
+}
+
+.pn-sidebar__pie {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pn-ver-tienda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 46px;
+    font-weight: 600;
+    color: var(--pn-sidebar-texto) !important;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 12px;
+    transition: background .15s;
+}
+
+.pn-ver-tienda:hover {
+    background: rgba(255, 255, 255, .06);
+}
+
+.pn-usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--pn-sidebar-2);
+    border-radius: 14px;
+}
+
+.pn-usuario strong,
+.pn-usuario small {
+    display: block;
+}
+
+.pn-usuario small {
+    color: var(--pn-sidebar-tenue);
+}
+
+.pn-avatar {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--pn-acento);
+    border-radius: 50%;
+}
+
+.panel-backdrop {
+    display: none;
+}
+
+/* Móvil: la barra lateral se vuelve un menú que se desliza */
+@media (max-width: 900px) {
+    .panel-sidebar {
+        position: fixed;
+        inset: 0 auto 0 0;
+        z-index: 60;
+        width: 270px;
+        transform: translateX(-100%);
+        transition: transform .25s ease;
+    }
+
+    body.panel--menu .panel-sidebar {
+        transform: none;
+    }
+
+    body.panel--menu .panel-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 55;
+        background: rgba(21, 19, 31, .45);
+    }
+}
+
+/* [FIN] BARRA LATERAL */

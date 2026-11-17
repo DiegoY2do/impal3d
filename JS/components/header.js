@@ -73,7 +73,7 @@ export function renderNavbar() {
           </form>
 
           <div class="store-actions">
-            <a class="store-action" href="./index.html" aria-label="Mi cuenta">
+            <a class="store-action" href="./cuenta.html" aria-label="Mi cuenta">
               <svg viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="1.6"
                    stroke-linecap="round" stroke-linejoin="round"

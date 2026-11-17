@@ -717,6 +717,31 @@
     border-radius: 4px;
 }
 
+@media (max-width: 768px) {
+    .preguntas-contenido {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .preguntas-rapidas {
+        padding: 40px 0;
+    }
+}
+
+.preguntas-texto h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.preguntas-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pregunta p {
+  margin-top: 16px;
+} 
+
 .pregunta p {
     margin-top: 16px;
     font-size: 15px;

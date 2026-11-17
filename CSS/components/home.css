@@ -1,0 +1,375 @@
+.slider-destacados {
+    --visibles: 4;
+    --separacion: 16px;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Panel gris que envuelve encabezado + cards */
+.container-destacados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ---------- Encabezado ---------- */
+
+.destacados-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.destacados-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.destacados-text p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    color: var(--neutro-600);
+}
+
+.destacados-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.destacados-ver-todos {
+    margin-right: 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--morado-600);
+    transition: color 0.3s ease;
+}
+
+.destacados-ver-todos:hover {
+    color: var(--morado-800);
+}
+
+/* Flechas redondas (estilo "Contorno" del sistema de diseño) */
+.destacados-flecha {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutro-200);
+    border-radius: 50%;
+    background: var(--neutro-0);
+    color: var(--neutro-950);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.destacados-flecha:hover {
+    color: var(--morado-600);
+    border-color: var(--morado-600);
+}
+
+.destacados-flecha svg {
+    width: 18px;
+    height: 18px;
+}
+
+.destacados-flecha:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ---------- Carrusel ---------- */
+
+.destacados-track {
+    display: flex;
+    gap: var(--separacion);
+    padding: 8px 0 32px;
+    margin: -8px 0 -32px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.destacados-track::-webkit-scrollbar {
+    display: none;
+}
+
+.destacados-track .card {
+    flex: 0 0 calc((100% - (var(--visibles) - 1) * var(--separacion)) / var(--visibles));
+    scroll-snap-align: start;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1280px) {
+    .slider-destacados {
+        --visibles: 3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-destacados {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-destacados {
+        --visibles: 2;
+        --separacion: 12px;
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 567px) {
+    .slider-destacados {
+        --visibles: 1;
+    }
+
+    .destacados-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================
+   SLIDER OFERTAS
+   ========================================================== */
+
+.slider-ofertas {
+    --visibles: 3;
+    --separacion: 16px;
+    --card-ancho: calc((100cqw - (var(--visibles) - 1) * var(--separacion)) / var(--visibles));
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ofertas {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: var(--separacion);
+    border-radius: 28px;
+}
+
+
+.ofertas-banner {
+    width: clamp(240px, 26%, 360px);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    padding: clamp(20px, 2vw, 28px);
+    background: var(--neutro-900);
+    border-radius: 20px;
+}
+
+.ofertas-badge {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--turquesa-500);
+    color: var(--neutro-950);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.ofertas-titulo {
+    font-size: clamp(22px, 2.2vw, 30px);
+    line-height: 1.2;
+    color: var(--neutro-0);
+}
+
+.ofertas-texto {
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.5;
+    color: var(--neutro-300);
+}
+
+/* ---------- Cuenta regresiva ---------- */
+
+.ofertas-cuenta {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.ofertas-cuenta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px;
+    background: var(--neutro-800);
+    border-radius: 12px;
+}
+
+/* tabular-nums: todos los dígitos miden lo mismo y los números no "bailan" */
+.ofertas-cuenta-valor {
+    font-family: var(--font-heading);
+    font-size: clamp(20px, 1.8vw, 26px);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--turquesa-500);
+    font-variant-numeric: tabular-nums;
+}
+
+.ofertas-cuenta-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--neutro-400);
+}
+
+/* ---------- Botón ---------- */
+
+.ofertas-boton {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 14px;
+    background: var(--turquesa-500);
+    color: var(--neutro-950);
+    font-family: var(--font-heading);
+    font-size: clamp(15px, 1.25vw, 16px);
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ofertas-boton:hover {
+    background: var(--turquesa-300);
+    transform: translateY(-10px);
+}
+
+
+.ofertas-slider {
+    flex: 1;
+    min-width: 0;
+    container-type: inline-size;
+}
+
+.ofertas-track {
+    display: flex;
+    gap: var(--separacion);
+    padding: 8px 0 32px;
+    margin: -8px 0 -32px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.ofertas-track::-webkit-scrollbar {
+    display: none;
+}
+
+.ofertas-track .card {
+    flex: 0 0 280px;
+    flex: 0 0 var(--card-ancho);
+    scroll-snap-align: start;
+}
+
+.ofertas-controles {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ofertas-flecha {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutro-200);
+    border-radius: 50%;
+    background: var(--neutro-0);
+    color: var(--neutro-950);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.ofertas-flecha:hover {
+    color: var(--morado-600);
+    border-color: var(--morado-600);
+}
+
+.ofertas-flecha svg {
+    width: 18px;
+    height: 18px;
+}
+
+.ofertas-flecha:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+    .slider-ofertas {
+        --visibles: 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-ofertas {
+        --visibles: 3;
+        padding: 60px 0;
+    }
+
+    .container-ofertas {
+        flex-direction: column;
+    }
+
+    .ofertas-banner {
+        width: 100%;
+    }
+
+    .ofertas-slider {
+        flex: none;
+        width: 100%;
+    }
+
+    .ofertas-cuenta,
+    .ofertas-boton {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-ofertas {
+        --visibles: 2;
+        --separacion: 12px;
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 567px) {
+    .slider-ofertas {
+        --visibles: 1;
+    }
+}

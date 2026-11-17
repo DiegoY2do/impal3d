@@ -16,7 +16,7 @@
 .promo-etiqueta {
     display: inline-block;
     background: var(--turquesa-300);
-    color: var(--neutro-959);
+    color: var(--neutro-950);
     font-family: var(--font-body);
     font-size: clamp(13px, 1.1vw, 15px);
     font-weight: 700;

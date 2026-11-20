@@ -1,0 +1,409 @@
+/* ==========================================================================
+   [INICIO] PANEL — PRODUCTOS
+   Pantalla de producto (agregar/editar), imágenes, vista previa y lista.
+   ========================================================================== */
+
+/* ---------- Layout de la pantalla de producto ---------- */
+.pf-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+.pf-col-principal,
+.pf-col-lateral {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pf-eliminar {
+    align-self: center;
+    padding: 8px 14px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--pn-peligro);
+    background: none;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pf-eliminar:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Imágenes ---------- */
+.pi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.pi-tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    overflow: hidden;
+    background: var(--pn-violeta-100);
+    border: 0;
+    border-radius: 14px;
+    cursor: grab;
+}
+
+.pi-tile img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pi-tile--principal {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.pi-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--pn-texto);
+    border-radius: 999px;
+}
+
+.pi-quitar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: #fff;
+    background: rgba(23, 21, 31, .75);
+    border: 0;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .15s, background .15s;
+}
+
+.pi-tile:hover .pi-quitar,
+.pi-quitar:focus-visible {
+    opacity: 1;
+}
+
+.pi-quitar:hover {
+    background: var(--pn-peligro);
+}
+
+@media (hover: none) {
+    .pi-quitar {
+        opacity: 1;
+    }
+}
+
+.pi-tile.is-arrastrando {
+    opacity: .4;
+}
+
+.pi-tile.is-sobre {
+    outline: 3px solid var(--pn-acento);
+    outline-offset: 2px;
+}
+
+.pi-subir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pn-violeta-texto);
+    background: var(--pn-superficie);
+    border: 2px dashed var(--pn-borde-input);
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+
+.pi-subir:hover,
+.pi-subir:focus-visible {
+    background: #fbfaff;
+    border-color: var(--pn-acento);
+    outline: none;
+}
+
+.pi-mas {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    background: var(--pn-violeta-100);
+    border-radius: 50%;
+}
+
+/* ---------- Vista previa de la tarjeta ---------- */
+.pv-tarjeta {
+    overflow: hidden;
+    background: var(--pn-superficie);
+    border: 1px solid var(--pn-borde);
+    border-radius: 16px;
+}
+
+.pv-img {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    margin: 10px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: var(--pn-violeta-100);
+    border-radius: 12px;
+}
+
+.pv-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pv-vacio {
+    font-size: 13px;
+    color: var(--pn-violeta-texto);
+}
+
+.pv-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+.pv-badge--nuevo {
+    color: #063f37;
+    background: var(--pn-turquesa);
+}
+
+.pv-badge--agotado {
+    color: #fff;
+    background: var(--pn-texto);
+}
+
+.pv-badge--nuevo:not([hidden]) + .pv-badge--agotado {
+    top: 40px;
+}
+
+.pv-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.pv-cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 18px 18px;
+}
+
+.pv-cat {
+    font-size: 12px;
+    color: var(--pn-tenue);
+}
+
+.pv-nombre {
+    font-family: var(--pn-fuente-titulo);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pv-rating {
+    font-size: 13px;
+    color: var(--pn-tenue);
+}
+
+.pv-rating b {
+    color: var(--pn-texto);
+}
+
+.pv-estrella {
+    color: #f4a623;
+}
+
+.pv-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.pv-precios {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pv-precio {
+    font-family: var(--pn-fuente-titulo);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.pv-carrito {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--pn-acento);
+    border-radius: 50%;
+}
+
+/* ---------- Lista de productos ---------- */
+.pl-card {
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pl-barra {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--pn-borde);
+}
+
+.pl-buscar {
+    max-width: 380px;
+}
+
+.pl-tabla-wrap {
+    overflow-x: auto;
+}
+
+.pl-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.pl-tabla th {
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--pn-tenue);
+    background: #fafafd;
+    border-bottom: 1px solid var(--pn-borde);
+}
+
+.pl-tabla td {
+    padding: 14px 24px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--pn-borde);
+}
+
+.pl-tabla tbody tr {
+    cursor: pointer;
+}
+
+.pl-tabla tbody tr:hover td {
+    background: #fbfaff;
+}
+
+.pl-tabla tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.pl-prod {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pl-prod a {
+    font-weight: 700;
+    color: var(--pn-texto);
+    text-decoration: none;
+}
+
+.pl-prod small {
+    display: block;
+    font-size: 12px;
+    color: var(--pn-tenue);
+}
+
+.pl-thumb {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: var(--pn-violeta-100);
+    border-radius: 10px;
+}
+
+.pl-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pl-accion {
+    text-align: right;
+}
+
+.pl-vacio {
+    padding: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+    .pf-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .pn-card {
+        padding: 20px;
+    }
+
+    .pn-grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pi-tile--principal {
+        grid-row: span 1;
+    }
+
+    .pl-tabla th:nth-child(2),
+    .pl-tabla td:nth-child(2) {
+        display: none;
+    }
+}
+
+/* [FIN] PANEL — PRODUCTOS */

@@ -15,6 +15,10 @@
 @import url('./components/checkout.css');
 
 
+@import url("components/formproducto.css");
+@import url('./components/slider-vendidos.css');
+@import url('./components/panelusuario.css');
+
 *{
     padding:0;
     margin:0;

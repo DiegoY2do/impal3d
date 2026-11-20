@@ -1,0 +1,117 @@
+/* ==========================================================================
+   [INICIO] PANEL DE ADMINISTRACIÓN — base, variables y layout
+   Panel.html carga solo este archivo; aquí se importan los componentes.
+   ========================================================================== */
+
+@import url("components/panel-sidebar.css");
+@import url("components/panel-topbar.css");
+@import url("components/panel-ui.css");
+@import url("components/panel-producto.css");
+
+:root {
+    /* Barra lateral */
+    --pn-sidebar: #15131f;
+    --pn-sidebar-2: #211e30;
+    --pn-sidebar-texto: #e8e7f1;
+    --pn-sidebar-tenue: #8e8ba6;
+    --pn-sidebar-linea: rgba(255, 255, 255, .08);
+
+    /* Contenido */
+    --pn-fondo: #f7f7fb;
+    --pn-superficie: #ffffff;
+    --pn-borde: #e8e8f0;
+    --pn-borde-input: #d9dae6;
+    --pn-texto: #17151f;
+    --pn-tenue: #6f6e80;
+
+    /* Marca */
+    --pn-acento: #5b3fd9;
+    --pn-acento-hover: #4b31c2;
+    --pn-violeta-100: #e6e2fd;
+    --pn-violeta-texto: #4a35b8;
+    --pn-turquesa: #1fc8b0;
+    --pn-peligro: #d33a3a;
+
+    --pn-radio: 18px;
+    --pn-radio-sm: 10px;
+    --pn-fuente: 'DM Sans', system-ui, sans-serif;
+    --pn-fuente-titulo: 'Sora', 'DM Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body.panel {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    min-height: 100vh;
+    background: var(--pn-fondo);
+    color: var(--pn-texto);
+    font-family: var(--pn-fuente);
+    font-size: 15px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+
+.panel h1,
+.panel h2,
+.panel h3 {
+    margin: 0;
+    font-family: var(--pn-fuente-titulo);
+}
+
+.panel p {
+    margin: 0;
+}
+
+.panel button,
+.panel input,
+.panel select,
+.panel textarea {
+    font: inherit;
+    color: inherit;
+}
+
+:where(.panel) a {
+    color: var(--pn-acento);
+}
+
+.panel-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-contenido {
+    flex: 1;
+    padding: 8px 32px 72px;
+}
+
+.pn-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    body.panel {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .panel-contenido {
+        padding: 8px 16px 56px;
+    }
+}
+
+/* [FIN] PANEL DE ADMINISTRACIÓN */

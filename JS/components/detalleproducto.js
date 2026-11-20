@@ -1,4 +1,12 @@
+import { renderProducto } from './producto.js';
 import { cargarProductos } from './productos.js';
+
+// Renderizar el componente
+const contenedor = document.getElementById("producto");
+
+if (contenedor) {
+    contenedor.outerHTML = renderProducto();
+}
 
 async function mostrarProducto() {
     

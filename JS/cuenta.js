@@ -1,3 +1,20 @@
+function leerUsuarios() {
+    try {
+        const datos = localStorage.getItem('impal3d_usuarios');
+        const usuarios = datos ? JSON.parse(datos) : [];
+        return Array.isArray(usuarios) ? usuarios: [];
+    } catch {
+        return [];
+    }
+}
+
+async function crearHashContrasena(contraseña) {
+    const datos = new TextEncoder().encode(contraseña);
+    const resultado = await crypto.subtle.digest('SHA-256', datos);
+
+    return Array.from(new Uint8Array(resultado)).map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
 const cuentaHeader = document.querySelector('#cuenta-header');
 const cuentaMain = document.querySelector('#cuenta-main');
 
@@ -65,7 +82,14 @@ cuentaMain.innerHTML = `
 
         <article class="cuenta-panel" id="vista-sesion" hidden>
             <h2>Iniciar sesión</h2>
-            <form class="cuenta-formulario">
+            <div
+                id="sesion-mensaje"
+                class="cuenta-alerta"
+                role="alert"
+                aria-live="polite"
+                hidden
+            ></div>
+            <form class="cuenta-formulario" id="formulario-sesion" novalidate>
                 <label for="sesion-correo">Correo electrónico</label>
                 <input id="sesion-correo" name="correo" type="email" placeholder="tu@correo.com" autocomplete="email">
 
@@ -80,7 +104,7 @@ cuentaMain.innerHTML = `
                     <a href="#vista-recuperar">¿Olvidaste tu contraseña?</a>
                 </div>
 
-                <button type="button" class="cuenta-boton">Entrar</button>
+                <button type="submit" class="cuenta-boton">Entrar</button>
             </form>
             <div class="cuenta-separador"><span>o</span></div>
             <button type="button" class="cuenta-boton-google">Continuar con Google</button>
@@ -128,7 +152,7 @@ document.querySelectorAll('a[href^="#vista-"]').forEach((enlace) => {
 const formularioRegistro = document.querySelector('#formulario-registro');
 const mensajeRegistro = document.querySelector('#registro-mensaje');
 
-formularioRegistro.addEventListener('submit', (evento) => {
+formularioRegistro.addEventListener('submit', async (evento) => {
     evento.preventDefault();
 
     const nombre = document.querySelector('#registro-nombre').value.trim();
@@ -174,14 +198,79 @@ formularioRegistro.addEventListener('submit', (evento) => {
         return;
     }
 
+    const usuarios = leerUsuarios();
+    const correoNormalizado = correo.toLowerCase();
+
+    const correoYaRegistrado = usuarios.some((usuarioGuardado) => 
+        usuarioGuardado.correo?.toLowerCase() === correoNormalizado);
+
+    if(correoYaRegistrado) {
+        mensajeRegistro.classList.add('cuenta-alerta--error');
+        mensajeRegistro.textContent = 'Este correo ya está registrado.';
+        return;
+    }
+
+    const hashContrasena = await crearHashContrasena(contrasena);
+
     const usuario = {
         nombre,
-        correo,
+        correo: correoNormalizado,
         telefono: digitosTelefono,
-        contrasena
+        passwordHash: hashContrasena,
     };
 
+    usuarios.push(usuario);
+
+    localStorage.setItem('impal3d_usuarios', JSON.stringify(usuarios));
+
     mensajeRegistro.classList.add('cuenta-alerta--exito');
-    mensajeRegistro.textContent = 'Datos válidos. Se generó el objeto JSON en la consola.';
-    console.log(JSON.stringify(usuario, null, 2));
+    mensajeRegistro.textContent = 'Registro guardado en este navegador.';
+    
+});
+const formularioSesion = document.querySelector('#formulario-sesion');
+const mensajeSesion = document.querySelector('#sesion-mensaje');
+
+formularioSesion.addEventListener('submit', async (evento) => {
+    evento.preventDefault();
+
+    const correo = document.querySelector('#sesion-correo').value.trim().toLowerCase();
+    const contrasena = document.querySelector('#sesion-contrasena').value;
+
+    mensajeSesion.hidden = false;
+    mensajeSesion.classList.remove('cuenta-alerta--error', 'cuenta-alerta--exito');
+
+    if (!correo || !contrasena) {
+        mensajeSesion.classList.add('cuenta-alerta--error');
+        mensajeSesion.textContent = 'Escribe tu correo y contraseña.';
+        return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo)) {
+        mensajeSesion.classList.add('cuenta-alerta--error');
+        mensajeSesion.textContent = 'Escribe un correo electrónico válido.';
+        return;
+    }
+
+    const usuarios = leerUsuarios();
+    const hashContrasena = await crearHashContrasena(contrasena);
+
+    const usuario = usuarios.find(
+        (usuarioGuardado) =>
+            usuarioGuardado.correo?.toLowerCase() === correo &&
+            usuarioGuardado.passwordHash === hashContrasena
+    );
+
+    if (!usuario) {
+        mensajeSesion.classList.add('cuenta-alerta--error');
+        mensajeSesion.textContent = 'Correo o contraseña inválidos.';
+        return;
+    }
+
+    const sesion = {
+        nombre: usuario.nombre,
+        correo: usuario.correo
+    };
+
+    localStorage.setItem('impal3d_sesion', JSON.stringify(sesion));
+    window.location.href = 'index.html';
 });

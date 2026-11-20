@@ -22,9 +22,14 @@
 /* Layout */
 .cuenta-layout {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 280px minmax(0, 1fr);
     gap: 32px;
     align-items: start;
+}
+
+.cuenta-menu,
+.cuenta-contenido {
+    min-width: 0;
 }
 
 /* Menú lateral */
@@ -93,7 +98,7 @@
 }
 .cuenta-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -138,6 +143,7 @@
     border: 1px solid var(--neutro-200);
     border-radius: 22px;
     overflow-x: auto;
+    max-width: 100%;
 }
 .cuenta-tabla {
     width: 100%;
@@ -178,7 +184,7 @@
 /* Direcciones */
 .cuenta-direcciones {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 .cuenta-direccion {
@@ -250,16 +256,16 @@
 /* Favoritos */
 .cuenta-favoritos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .cuenta-layout { grid-template-columns: 1fr; }
+    .cuenta-layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 768px) {
     .cuenta-stats,
     .cuenta-direcciones,
-    .cuenta-favoritos { grid-template-columns: 1fr; }
+    .cuenta-favoritos { grid-template-columns: minmax(0, 1fr); }
 }

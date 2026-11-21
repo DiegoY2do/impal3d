@@ -9,12 +9,12 @@
             "vendidos"
         ],
         "categoria": "Terror",
-        "precio": 5000,
+        "precio": 50,
         "rating": 4.9,
         "resenas": 212,
         "desc": 50,
         "descripcion": "Calavera decorativa con patrón Voronoi calado, impresa capa por capa en PLA+ seda dorado. Ligera, resistente y con juegos de luz y sombra que solo la impresión 3D hace posibles.",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/coraline.webp"
         ]
@@ -35,7 +35,7 @@
         "nuevo": true,
         "desc": 20,
         "descripcion": "Figura inspirada en el fantastico mundo de Jack",
-        "tamaño": "5",
+        "tamaño": "5 cm ",
         "imagenes": [
             "./assets/img/productos/Oogie-Boogie.webp"
         ]
@@ -56,7 +56,7 @@
         "nuevo": true,
         "desc": 20,
         "descripcion": "Figura impresa en 3D inspirada en la pelicula de Trick or treat ",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/sam.webp"
         ]
@@ -74,7 +74,7 @@
         "rating": 5.0,
         "resenas": 143,
         "descripcion": "La novia ideal para el Chucky que llevas dentro",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/tiffany.webp"
         ]
@@ -93,7 +93,7 @@
         "rating": 4.6,
         "resenas": 98,
         "descripcion": "wasaaaaa",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/Ghostface.webp"
         ]
@@ -112,7 +112,7 @@
         "rating": 4.8,
         "resenas": 261,
         "descripcion": "Todos flotan",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/Pennywise.webp"
         ]
@@ -130,7 +130,7 @@
         "rating": 4.9,
         "resenas": 187,
         "descripcion": "No tiene prisa de todos modos sabe donde vives",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/Michael-Myers.webp"
         ]
@@ -148,7 +148,7 @@
         "rating": 4.5,
         "resenas": 64,
         "descripcion": "Ni tiene el covid",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/Dr. Peste.webp"
         ]
@@ -166,7 +166,7 @@
         "rating": 4.7,
         "resenas": 129,
         "descripcion": "Duerme, que yo me encargo de arreglarte en la noche.",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "./assets/img/productos/Freddy Krueger.webp"
         ]
@@ -184,7 +184,7 @@
         "rating": 4.9,
         "resenas": 233,
         "descripcion": "No soy antisocial, solamente la humanidad me parece decepcionante",
-        "tamaño": "5",
+        "tamaño": "5 cm",
         "imagenes": [
             "https://images.cults3d.com/pZW2zB34Juezii6goz14Gn3yvew=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/33914878/illustration-file/4911b2cb-f858-40da-b216-11f77530e993/1.jpg"
         ]
@@ -203,7 +203,7 @@
         "resenas": 0,
         "nuevo": true,
         "descripcion": "Each part of the model is separated by color, allowing you to easily print them without the need for AMS. The pieces are designed with precise tolerances, making them simple to assemble and ensuring a smooth, hassle-free building process.\n\nThe package includes STL and 3MF files that I have arranged and optimized by color to make printing easier and require as little support as possible.",
-        "tamaño": "31",
+        "tamaño": "31 cm",
         "imagenes": [
             "./assets/img/productos/Mo-hinh-chien-binh-toc-den-cam-k.webp",
             "./assets/img/productos/IMG_1433.webp",

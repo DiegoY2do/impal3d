@@ -40,7 +40,28 @@ mount('#prev', renderInicioHero);
 mount('#promo-banner', renderPromoBanner);
 mount('#cuenta', renderCuenta);
 mount('#brands', renderBrands);
-mount('#benefits', renderBenefits);
+
+mount('#benefits', renderBenefits, () => {
+
+    const benefitsElement = document.getElementById('benefitsCarousel');
+    if (!benefitsElement) return;
+
+    const benefitsCarousel = new bootstrap.Carousel(benefitsElement, {
+        interval: false, 
+        ride: false,
+        wrap: true,
+        touch: true
+    });
+
+    const INTERVALO = 3000;
+    let timer = setInterval(() => benefitsCarousel.prev(), INTERVALO);
+
+     benefitsElement.addEventListener('slid.bs.carousel', () => {
+        clearInterval(timer);
+        timer = setInterval(() => benefitsCarousel.prev(), INTERVALO);
+    });
+
+});
 mount('#banner-inicio', renderBannerInicio);
 mount('#novedades', renderNovedades);
 mount('#resenas', renderResenas, initResenas);
@@ -57,5 +78,4 @@ if (compraxcategoria) {
     initCompraxcategoria();
 }
 
-// Al final, cuando todo el HTML ya existe
 initAnimaciones();

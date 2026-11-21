@@ -306,12 +306,17 @@
 }
 
 .resenas-producto-indicadores {
+    display: none;
     justify-content: center;
     margin-top: 2px;
     padding: 0;
 }
 
 @media (max-width: 768px) {
+    .resenas-producto-indicadores {
+        display: flex;
+    }
+
     .resenas-producto-container {
         padding: 40px 0 56px;
     }

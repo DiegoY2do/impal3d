@@ -38,8 +38,11 @@
 .indicador {
     width: 6px;
     height: 6px;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
     background: var(--neutro-300);
+    cursor: pointer;
 }
 
 .indicador.activo {
@@ -300,6 +303,12 @@
 
 .resenas-producto-cliente strong {
     color: var(--neutro-950);
+}
+
+.resenas-producto-indicadores {
+    justify-content: center;
+    margin-top: 2px;
+    padding: 0;
 }
 
 @media (max-width: 768px) {

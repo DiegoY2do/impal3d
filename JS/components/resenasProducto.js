@@ -1,3 +1,5 @@
+import { initCarruselResenas } from './carruselResenas.js';
+
 export function renderResenasProducto() {
     const resumen = {
         promedio: 4.9,
@@ -101,9 +103,20 @@ export function renderResenasProducto() {
                         `).join('')}
                     </div>
                 </div>
+
+                <div class="resenas-indicadores resenas-producto-indicadores"
+                     aria-label="Páginas de reseñas"></div>
             </div>
         </section>
     `;
+}
+
+export function initResenasProducto() {
+    initCarruselResenas(
+        '.resenas-producto-lista',
+        '.resenas-producto-card',
+        '.resenas-producto-indicadores'
+    );
 }
 
 function renderEstrellas(rating) {

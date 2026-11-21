@@ -1,3 +1,5 @@
+import { initCarruselResenas } from './carruselResenas.js';
+
 export function renderResenas() {
     const resenas = [
         {
@@ -29,15 +31,15 @@ export function renderResenas() {
                         </p>
                     </div>
 
-                     <div class="resenas-indicadores" aria-label="Seleccionar reseña">
+                    <div class="resenas-indicadores" aria-label="Seleccionar reseña">
                         ${resenas.map((_, index) => `
                             <button
                                 class="indicador ${index === 0 ? 'activo' : ''}"
                                 data-index="${index}"
                                 aria-label="Ver reseña ${index + 1}"
                                 aria-pressed="${index === 0}"
-                                type="button">
-                            </button>
+                                type="button"
+                            ></button>
                         `).join('')}
                     </div>
                 </div>
@@ -72,23 +74,9 @@ export function renderResenas() {
 }
 
 export function initResenas() {
-    const indicadores = document.querySelectorAll('.indicador');
-    const tarjetas = document.querySelectorAll('.resena-card');
-
-    indicadores.forEach(indicador => {
-        indicador.addEventListener('click', () => {
-            const index = Number(indicador.dataset.index);
-
-            tarjetas.forEach((tarjeta, tarjetaIndex) => {
-                tarjeta.classList.toggle('activa', tarjetaIndex === index);
-            });
-
-            indicadores.forEach((elemento, indicadorIndex) => {
-                const activo = indicadorIndex === index;
-
-                elemento.classList.toggle('activo', activo);
-                elemento.setAttribute('aria-pressed', activo);
-            });
-        });
-    });
+    initCarruselResenas(
+        '.resenas-grid',
+        '.resena-card',
+        '.resenas-indicadores'
+    );
 }

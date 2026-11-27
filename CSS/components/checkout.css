@@ -1,5 +1,4 @@
 
-
 /* CONFIGURACIÓN GENERAL */
 
 .checkout-page {
@@ -89,11 +88,37 @@
     gap: 9px;
     white-space: nowrap;
 
-    color: var(--neutro-400);
+    /* Es un <button>: quitamos su estilo por defecto */
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+
+    color: var(--neutro-500);
     font-size: 12px;
     font-weight: 600;
 
+    cursor: default;
     transition: color 0.2s ease;
+}
+
+.progress-step:disabled {
+    opacity: 1;
+}
+
+/* Los pasos completados se pueden tocar para regresar */
+.progress-step.completed:not(:disabled) {
+    cursor: pointer;
+}
+
+.progress-step.completed:not(:disabled):hover span:last-child {
+    text-decoration: underline;
+}
+
+.progress-step:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--morado-500) 35%, transparent);
+    outline-offset: 4px;
+    border-radius: 20px;
 }
 
 .step-number {
@@ -133,10 +158,17 @@
 }
 
 .progress-line {
-    height: 1px;
+    height: 2px;
     flex: 1;
     min-width: 25px;
+    border-radius: 2px;
     background-color: var(--neutro-100);
+    transition: background-color 0.3s ease;
+}
+
+/* La línea se pinta cuando el paso anterior ya está completo */
+.progress-step.completed + .progress-line {
+    background-color: var(--morado-500);
 }
 
 /* DISTRIBUCIÓN PRINCIPAL */
@@ -156,6 +188,120 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* PANTALLAS POR PASO */
+
+.checkout-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: step-in 0.25s ease;
+}
+
+/* Sin esta regla, display:flex ganaría al atributo hidden */
+.checkout-step[hidden] {
+    display: none;
+}
+
+@keyframes step-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.checkout-step h2:focus {
+    outline: none;
+}
+
+/* Botones Volver / Continuar de cada paso */
+.step-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.step-actions .checkout-button {
+    width: auto;
+    min-width: 220px;
+    margin: 0;
+    padding: 12px 24px;
+}
+
+.step-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background: none;
+    border: 0;
+    padding: 8px 0;
+
+    color: var(--neutro-600);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.step-back:hover {
+    color: var(--morado-600);
+}
+
+/* REVISIÓN DE DATOS (arriba de los pasos 2 y 3) */
+
+.review-box {
+    background-color: var(--neutro-0);
+    border: 1px solid var(--neutro-100);
+    border-radius: 15px;
+    padding: 4px 20px;
+}
+
+.review-box:empty {
+    display: none;
+}
+
+.review-row {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 12px;
+    padding: 14px 0;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.review-row + .review-row {
+    border-top: 1px solid var(--neutro-100);
+}
+
+.review-title {
+    color: var(--neutro-600);
+}
+
+.review-content {
+    color: var(--neutro-900);
+    overflow-wrap: anywhere;
+}
+
+.review-edit {
+    background: none;
+    border: 0;
+    padding: 0;
+
+    color: var(--morado-600);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.review-edit:hover {
+    text-decoration: underline;
 }
 
 /* TARJETAS */
@@ -227,6 +373,23 @@
 .checkout-page .form-group textarea {
     resize: vertical;
     min-height: 75px;
+}
+
+/* SELECT DE ESTADO
+   Los estados salían en letras blancas porque el select heredaba el color
+   o el esquema oscuro de otros estilos. Forzamos texto oscuro y fondo claro. */
+.checkout-page .form-group select {
+    color-scheme: light;
+    cursor: pointer;
+}
+
+.checkout-page .form-group select option {
+    color: var(--neutro-900) !important;
+    background-color: var(--neutro-0) !important;
+}
+
+.checkout-page .form-group select option[value=""] {
+    color: var(--neutro-500) !important;
 }
 
 .checkout-page .form-row {
@@ -447,8 +610,117 @@
 }
 
 .product-info small {
-    color: var(--neutro-400);
+    color: var(--neutro-600);
     font-size: 11px;
+}
+
+/* CUPÓN DE DESCUENTO */
+
+.coupon {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.coupon label {
+    color: var(--neutro-900);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.coupon-field {
+    display: flex;
+    gap: 8px;
+}
+
+.checkout-page .coupon-field input {
+    flex: 1;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+
+    border: 1px solid var(--neutro-100);
+    border-radius: 10px;
+    background-color: var(--neutro-50);
+    color: var(--neutro-900);
+
+    font-family: inherit;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkout-page .coupon-field input::placeholder {
+    color: var(--neutro-500);
+    text-transform: none;
+}
+
+.checkout-page .coupon-field input:focus {
+    background-color: var(--neutro-0);
+    border-color: var(--morado-500);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--morado-500) 18%, transparent);
+}
+
+.checkout-page .coupon-field input.is-invalid {
+    border-color: var(--error, #D92D20);
+}
+
+.coupon-field button {
+    min-height: 42px;
+    padding: 0 16px;
+
+    border: 1px solid var(--morado-600);
+    border-radius: 10px;
+    background-color: var(--neutro-0);
+    color: var(--morado-600);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.coupon-field button:hover {
+    background-color: var(--morado-600);
+    color: var(--neutro-0);
+}
+
+.coupon-message {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.coupon-message:empty {
+    display: none;
+}
+
+.coupon-message.is-error {
+    color: var(--error, #D92D20);
+}
+
+.coupon-message.is-success {
+    color: var(--exito, #12805C);
+}
+
+/* Botón "Quitar" junto al cupón aplicado */
+.coupon-remove {
+    margin-left: 6px;
+    padding: 0;
+    background: none;
+    border: 0;
+
+    color: var(--morado-600);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: underline;
+
+    cursor: pointer;
 }
 
 .checkout-page hr {
@@ -465,14 +737,31 @@
     gap: 10px;
     margin-bottom: 12px;
 
-    font-size: 12px;
-    color: var(--neutro-400);
+    /* Antes 12px: casi no se leía */
+    font-size: 13px;
+    color: var(--neutro-600);
 }
 
-.summary-row span:last-child {
+/* La fila del cupón se oculta hasta que se aplica uno */
+.summary-row[hidden] {
+    display: none;
+}
+
+/* ">" para que solo afecte a la cantidad, no al texto del cupón */
+.summary-row > span:last-child {
     color: var(--neutro-900);
     font-weight: 600;
     text-align: right;
+    white-space: nowrap;
+}
+
+.summary-row strong {
+    color: var(--neutro-900);
+}
+
+/* Los descuentos en verde para distinguirlos */
+.summary-row.summary-discount > span:last-child {
+    color: var(--exito, #12805C);
 }
 
 .summary-total {
@@ -498,6 +787,7 @@
 
     margin-top: 20px;
     padding: 12px;
+    margin-bottom: 8px;
 
     display: flex;
     align-items: center;
@@ -537,10 +827,10 @@
 }
 
 .checkout-terms {
-    margin: 14px 0 0;
-    text-align: center;
-    color: var(--neutro-400);
-    font-size: 10px;
+    margin: 4px 0 0;
+    text-align: right;
+    color: var(--neutro-800);
+    font-size: 12px;
     line-height: 1.6;
 }
 
@@ -643,6 +933,35 @@
 
     .checkout-page h2 {
         font-size: 18px;
+    }
+
+    /* En celular el botón principal va arriba y a todo lo ancho */
+    .step-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .step-actions .checkout-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .step-back {
+        justify-content: center;
+    }
+
+    .checkout-terms {
+        text-align: center;
+    }
+
+    .review-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .review-title {
+        grid-column: 1 / -1;
+        font-size: 12px;
     }
 }
 

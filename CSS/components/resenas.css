@@ -38,8 +38,11 @@
 .indicador {
     width: 6px;
     height: 6px;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
     background: var(--neutro-300);
+    cursor: pointer;
 }
 
 .indicador.activo {
@@ -47,24 +50,6 @@
     border-radius: 10px;
     background: var(--morado-600);
 } 
-
-.resenas-indicadores .indicador {
-    padding: 0;
-    border: 0;
-    cursor: pointer;
-}
-
-.resenas-grid {
-    display: block;
-}
-
-.resena-card {
-    display: none;
-}
-
-.resena-card.activa {
-    display: flex;
-}
 
 .resenas-grid {
     display: grid;
@@ -149,10 +134,229 @@
     }
 
     .resenas-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding: 2px 0 10px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+    }
+
+    .resenas-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .resena-card {
-        min-height: auto;
+        min-height: 195px;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+}
+
+/* Reseñas de producto */
+.resenas-producto-container {
+    padding: 48px 0 80px;
+    background: var(--neutro-50);
+    color: var(--neutro-900);
+    font-family: var(--font-body);
+}
+
+.resenas-producto-container .container-max {
+    margin: 0 auto;
+}
+
+.resenas-producto-titulo {
+    margin: 0 0 26px;
+    font-size: clamp(28px, 3.5vw, 36px);
+}
+
+.resenas-producto-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+}
+
+.resenas-producto-resumen {
+    padding: 28px 25px;
+    border: 1px solid var(--neutro-200);
+    border-radius: 17px;
+    background: var(--neutro-0);
+}
+
+.resenas-producto-promedio {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.resenas-producto-promedio strong {
+    color: var(--neutro-950);
+    font-family: var(--font-heading);
+    font-size: 46px;
+    line-height: 1;
+}
+
+.resenas-producto-promedio span,
+.resenas-producto-total,
+.resenas-producto-fila {
+    color: var(--neutro-500);
+    font-size: 12px;
+}
+
+.resenas-producto-estrellas,
+.resenas-producto-card-estrellas {
+    color: #f5a623;
+    letter-spacing: 2px;
+}
+
+.resenas-producto-estrellas {
+    margin: 14px 0 6px;
+    font-size: 17px;
+}
+
+.estrella-vacia {
+    color: var(--neutro-300);
+}
+
+.resenas-producto-total {
+    margin: 0 0 20px;
+}
+
+.resenas-producto-distribucion {
+    display: grid;
+    gap: 11px;
+}
+
+.resenas-producto-fila {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr) 28px;
+    align-items: center;
+    gap: 8px;
+}
+
+.resenas-producto-barra {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--neutro-200);
+}
+
+.resenas-producto-barra span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--morado-500);
+}
+
+.resenas-producto-lista {
+    display: grid;
+    gap: 14px;
+}
+
+.resenas-producto-card {
+    padding: 24px 22px 21px;
+    border: 1px solid var(--neutro-200);
+    border-radius: 17px;
+    background: var(--neutro-0);
+}
+
+.resenas-producto-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.resenas-producto-card-estrellas {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.resenas-producto-card time {
+    flex-shrink: 0;
+    color: var(--neutro-500);
+    font-size: 12px;
+}
+
+.resenas-producto-card h3 {
+    margin: 12px 0 6px;
+    color: var(--neutro-950);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.resenas-producto-card p {
+    margin: 0 0 12px;
+    color: var(--neutro-600);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.resenas-producto-cliente {
+    color: var(--neutro-500);
+    font-size: 12px;
+}
+
+.resenas-producto-cliente strong {
+    color: var(--neutro-950);
+}
+
+.resenas-producto-indicadores {
+    display: none;
+    justify-content: center;
+    margin-top: 2px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .resenas-producto-indicadores {
+        display: flex;
+    }
+
+    .resenas-producto-container {
+        padding: 40px 0 56px;
+    }
+
+    .resenas-producto-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .resenas-producto-resumen {
+        padding: 24px 20px;
+    }
+
+    .resenas-producto-lista {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        padding: 2px 0 10px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+    }
+
+    .resenas-producto-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    .resenas-producto-card {
+        min-width: 0;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .resenas-producto-card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .resenas-producto-card time {
+        order: -1;
     }
 }

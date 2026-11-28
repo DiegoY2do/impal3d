@@ -182,7 +182,7 @@ botonCalcular.addEventListener("click", () => {
 
 // Envío provisional
     resultadoEnvio.textContent =
-        "🚚 Entrega estimada: 3 a 5 días hábiles · $99 MXN";
+        "Entrega estimada: 3 a 5 días hábiles · $99 MXN";
 
 });
 
@@ -191,9 +191,6 @@ const enlaceProducto = window.location.href;
 
 const compartirWhatsapp = document.getElementById("compartir-whatsapp");
 const compartirFacebook = document.getElementById("compartir-facebook");
-const botonCopiar = document.getElementById("copiar-enlace");
-const mensajeCopiado = document.getElementById("mensaje-copiado");
-
 const telefonoWhatsapp = "525641964434";
 
 const mensajeWhatsapp =
@@ -204,19 +201,6 @@ compartirWhatsapp.href =
 
 compartirFacebook.href =
     `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(enlaceProducto)}`;
-
-// Copiar enlace
-botonCopiar.addEventListener("click", async () => {
-
-    try {
-        await navigator.clipboard.writeText(enlaceProducto);
-        mensajeCopiado.textContent = "¡Enlace copiado!";
-    } catch (error) {
-        mensajeCopiado.textContent = "No se pudo copiar el enlace.";
-        console.error(error);
-    }
-
-});
 
 function alinearGaleria() {
     const galeria = document.querySelector(".producto-galeria");

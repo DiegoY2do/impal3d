@@ -1,4 +1,3 @@
-
 export function renderProducto() {
     return `
         <main class="detalle-producto">
@@ -79,20 +78,18 @@ export function renderProducto() {
                             <input type="text" id="codigo-postal" placeholder="Código postal" maxlength="5" inputmode="numeric" aria-label="Código postal">
                             <button id="calcular-envio" type="button">Calcular</button>
                         </div>
-                        <p id="envio-resultado" aria-live="polite">🚚 Entrega estimada: 3 a 5 días hábiles · $99 MXN</p>
+                        <p id="envio-resultado" aria-live="polite"> Entrega estimada: 3 a 5 días hábiles · $99 MXN</p>
                     </div>
 
                     <!-- Compartir -->
                     <div class="producto-compartir">
-                        <span>Compartir</span>
                         <a id="compartir-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Consultar producto por WhatsApp">WA</a>
                         <a href="https://www.instagram.com/imp_al3d?srtk=MTI0bGZxc2FrMHVsOQ==" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de IMP AL3D">IG</a>
                         <a id="compartir-facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Compartir producto en Facebook">FB</a>
-                        <button id="copiar-enlace" type="button">URL</button>
-                        <span id="mensaje-copiado" role="status"></span>
                     </div>
                 </div>
             </section>
         </main>
     `;
 }
+
